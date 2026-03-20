@@ -44,3 +44,228 @@ body {
   background: var(--background);
   color: var(--foreground);
 }
+
+/* Mobile responsive - bottom to top */
+@media (max-width: 768px) {
+  /* Header */
+  .header-inner {
+    padding: 12px 20px !important;
+  }
+  .header-nav {
+    display: none !important;
+  }
+  .header-logo img {
+    width: 140px !important;
+    height: auto !important;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 32px 20px 20px !important;
+  }
+  .footer-logo {
+    margin-bottom: 20px !important;
+  }
+  .footer-logo img {
+    width: 160px !important;
+    height: auto !important;
+  }
+  .footer-primary-nav {
+    flex-direction: column !important;
+    gap: 12px !important;
+    margin-bottom: 16px !important;
+  }
+  .footer-secondary-nav {
+    gap: 24px !important;
+    margin-bottom: 20px !important;
+  }
+
+  /* Our Methodology */
+  .our-methodology {
+    padding: 48px 0 !important;
+  }
+  .our-methodology-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+    padding: 0 20px !important;
+  }
+  .our-methodology .our-methodology-grid > div:first-child {
+    order: 1;
+  }
+  .our-methodology .our-methodology-grid > div:last-child {
+    order: 2;
+  }
+  .our-methodology-title {
+    font-size: 32px !important;
+  }
+  .our-methodology-image {
+    max-width: 100% !important;
+  }
+  .our-methodology-card-narrow {
+    align-self: stretch !important;
+    max-width: none !important;
+  }
+
+  /* Process Flow */
+  .process-flow {
+    padding: 48px 0 !important;
+  }
+  .process-flow-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  /* Features */
+  .features-section {
+    padding: 48px 0 !important;
+  }
+  .features-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+    padding: 0 20px !important;
+  }
+
+  /* Scoring Methodology */
+  .scoring-methodology {
+    padding: 48px 0 !important;
+  }
+  .scoring-methodology h2 {
+    font-size: 24px !important;
+  }
+  .scoring-methodology-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+  .scoring-methodology > div {
+    padding: 0 20px !important;
+  }
+  .scoring-methodology-grid > div:first-child {
+    order: 1;
+  }
+  .scoring-methodology-grid > div:last-child {
+    order: 2;
+  }
+  .scoring-methodology-header {
+    margin-bottom: 32px !important;
+  }
+  .scoring-methodology-image {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 623 / 344 !important;
+  }
+  .scoring-methodology-text {
+    gap: 20px !important;
+  }
+  .scoring-methodology-text h3 {
+    font-size: 16px !important;
+  }
+  .scoring-methodology-text p {
+    font-size: 14px !important;
+  }
+
+  /* Why Insurers */
+  .why-insurers {
+    padding: 48px 0 !important;
+  }
+  .why-insurers h2 {
+    font-size: 28px !important;
+  }
+  .why-insurers-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+    padding: 0 20px !important;
+  }
+  .why-insurers-grid > div:first-child {
+    order: 1;
+  }
+  .why-insurers-grid > div:last-child {
+    order: 2;
+  }
+  .why-insurers-image {
+    justify-self: center !important;
+    margin-right: 0 !important;
+    max-width: 100% !important;
+  }
+
+  /* What's Risk Score AI */
+  .whats-risk-score {
+    padding: 48px 24px 48px !important;
+  }
+  .whats-risk-score h2 {
+    font-size: 28px !important;
+  }
+  .whats-risk-score-image {
+    min-height: 280px !important;
+  }
+  .whats-risk-score p span {
+    white-space: normal !important;
+  }
+  .whats-risk-score-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+  .whats-risk-score-grid > div:first-child {
+    order: 1;
+  }
+  .whats-risk-score-grid > div:last-child {
+    order: 2;
+  }
+
+  /* Hero */
+  .hero-section {
+    padding: 24px 20px 0 !important;
+  }
+  .hero-section .hero-gradient-bg {
+    border-radius: 12px;
+  }
+  .hero-content {
+    padding: 40px 20px 0 !important;
+  }
+  .hero-heading,
+  .hero-content h1 {
+    font-size: 28px !important;
+    line-height: 1.25 !important;
+  }
+  .hero-heading-line2 {
+    white-space: normal !important;
+  }
+  .hero-content p {
+    font-size: 15px !important;
+    max-width: 100% !important;
+  }
+  /* Hide or shrink glassmorphism overlays on mobile - they take too much space */
+  .hero-overlays-left,
+  .hero-overlays-right {
+    display: none !important;
+  }
+  .hero-cards-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+    padding: 24px 20px 32px !important;
+  }
+  .hero-card {
+    align-self: stretch !important;
+    border-bottom-left-radius: 16px !important;
+    border-bottom-right-radius: 16px !important;
+  }
+  .hero-card-middle {
+    margin-top: 0 !important;
+    transform: none !important;
+    padding: 20px !important;
+  }
+  .hero-card-right-title span {
+    white-space: normal !important;
+  }
+  .hero-card-status-badges {
+    flex-wrap: wrap !important;
+  }
+  .hero-card-right-row2 {
+    flex-wrap: wrap !important;
+  }
+
+  /* What's Risk Score - top row cards stack */
+  .whats-risk-score-top-row {
+    grid-template-columns: 1fr !important;
+  }
+}

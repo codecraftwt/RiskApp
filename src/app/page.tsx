@@ -25,19 +25,19 @@ export default function Home() {
   return (
     <div style={{ minHeight: "100vh", backgroundColor: "white", fontFamily: "'Segoe UI', sans-serif" }}>
       {/* Header */}
-      <header style={{
+      <header className="main-header" style={{
         position: "sticky", top: 0, zIndex: 50,
         borderBottom: "1px solid rgba(0,0,0,0.06)",
         backgroundColor: "rgba(248,247,255,0.97)",
         backdropFilter: "blur(8px)",
       }}>
-        <div style={{
+        <div className="header-inner" style={{
           maxWidth: 1200, margin: "0 auto",
           display: "flex", alignItems: "center", justifyContent: "space-between",
           padding: "14px 32px",
         }}>
           {/* Logo */}
-          <a href="/" style={{ display: "flex", alignItems: "center", textDecoration: "none" }}>
+          <a href="/" className="header-logo" style={{ display: "flex", alignItems: "center", textDecoration: "none" }}>
             <Image
               src="/logo.svg"
               alt="RiskScore AI"
@@ -48,7 +48,7 @@ export default function Home() {
           </a>
 
           {/* Nav */}
-          <nav style={{ display: "flex", alignItems: "center", gap: 32 }}>
+          <nav className="header-nav" style={{ display: "flex", alignItems: "center", gap: 32 }}>
             {navLinks.map((link) => (
               <a
                 key={link.label}
@@ -87,10 +87,10 @@ export default function Home() {
 
       <main style={{ position: "relative" }}>
         {/* Hero Section */}
-        <section style={{ maxWidth: 1200, margin: "0 auto", padding: "40px 32px 0" }}>
+        <section className="hero-section" style={{ maxWidth: 1200, margin: "0 auto", padding: "40px 32px 0" }}>
           <div style={{ position: "relative" }}>
             {/* Gradient background with overlays (clipped) */}
-            <div style={{
+            <div className="hero-gradient-bg" style={{
               position: "absolute",
               inset: 0,
               borderRadius: 12,
@@ -98,7 +98,7 @@ export default function Home() {
               background: "linear-gradient(135deg, #1BA1E3 0%, #9B72CB 45%, #D96570 72%, #F49C46 100%)",
             }}>
             {/* Three glassmorphism overlays - left (tall left on top, small right at back) */}
-            <div style={{
+            <div className="hero-overlays-left" style={{
               position: "absolute", bottom: 0, left: 0,
               display: "flex", alignItems: "flex-end",
               zIndex: 0,
@@ -141,7 +141,7 @@ export default function Home() {
               }} />
             </div>
             {/* Three glassmorphism overlays - right (tall right on top, small left at back) */}
-            <div style={{
+            <div className="hero-overlays-right" style={{
               position: "absolute", bottom: 0, right: 0,
               display: "flex", alignItems: "flex-end",
               zIndex: 0,
@@ -186,7 +186,7 @@ export default function Home() {
 
             </div>
             {/* Hero content */}
-            <div style={{ position: "relative", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", padding: "80px 60px 0" }}>
+            <div className="hero-content" style={{ position: "relative", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", padding: "80px 60px 0" }}>
               {/* Badge */}
               <a href="#" style={{
                 display: "inline-flex", alignItems: "center", gap: 6,
@@ -206,7 +206,7 @@ export default function Home() {
               </a>
 
               {/* Heading */}
-              <h1 style={{
+              <h1 className="hero-heading" style={{
                 maxWidth: 700,
                 fontWeight: 800,
                 fontSize: 52,
@@ -216,7 +216,7 @@ export default function Home() {
                 letterSpacing: "-1px",
               }}>
                 <span style={{ display: "block" }}>The Future of Medical</span>
-                <span style={{ display: "block", whiteSpace: "nowrap" }}>Documentation Risk Management</span>
+                <span className="hero-heading-line2" style={{ display: "block", whiteSpace: "nowrap" }}>Documentation Risk Management</span>
               </h1>
 
               {/* Sub */}
@@ -251,7 +251,7 @@ export default function Home() {
             </div>
 
             {/* Feature Cards - inside hero, flush to bottom */}
-            <div style={{
+            <div className="hero-cards-grid" style={{
               position: "relative",
               zIndex: 10,
               display: "grid",
@@ -261,7 +261,7 @@ export default function Home() {
             }}>
 
             {/* Left Card */}
-            <div style={{
+            <div className="hero-card hero-card-left" style={{
               alignSelf: "flex-end",
               height: 175,
               borderRadius: 16,
@@ -322,7 +322,7 @@ export default function Home() {
             </div>
 
             {/* Middle Card - elevated */}
-            <div style={{
+            <div className="hero-card hero-card-middle" style={{
               borderRadius: 16,
               borderBottomLeftRadius: 0,
               borderBottomRightRadius: 0,
@@ -405,7 +405,7 @@ export default function Home() {
               </div>
 
               {/* Status Badges */}
-              <div style={{ display: "flex", gap: 8 }}>
+              <div className="hero-card-status-badges" style={{ display: "flex", gap: 8 }}>
                 <span style={{
                   borderRadius: 50, backgroundColor: "rgba(249,115,22,0.12)",
                   padding: "4px 12px", fontSize: 11.5, fontWeight: 600, color: "#ea6c1a",
@@ -428,7 +428,7 @@ export default function Home() {
             </div>
 
             {/* Right Card */}
-            <div style={{
+            <div className="hero-card hero-card-right" style={{
               alignSelf: "flex-end",
               height: 175,
               borderRadius: 16,
@@ -456,10 +456,10 @@ export default function Home() {
               </div>
 
               {/* Row 2: Left div (header + text) | Right div (donut chart) */}
-              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 16 }}>
+              <div className="hero-card-right-row2" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 16 }}>
                 {/* Left div */}
                 <div style={{ flex: 1, minWidth: 0 }}>
-                  <h4 style={{ fontWeight: 800, fontSize: 16, color: "#1a1a2e", marginBottom: 6, lineHeight: 1.3 }}>
+                  <h4 className="hero-card-right-title" style={{ fontWeight: 800, fontSize: 16, color: "#1a1a2e", marginBottom: 6, lineHeight: 1.3 }}>
                     <span style={{ whiteSpace: "nowrap" }}>Zero PHI Required HIPAA</span>
                     <br />
                     -compliant
@@ -511,7 +511,7 @@ export default function Home() {
         </section>
 
         {/* What's Risk Score AI Section */}
-        <section style={{ maxWidth: 1200, margin: "0 auto", padding: "100px 32px 80px" }}>
+        <section className="whats-risk-score" style={{ maxWidth: 1200, margin: "0 auto", padding: "100px 32px 80px" }}>
           {/* Header */}
           <div style={{ textAlign: "center", marginBottom: 48 }}>
             <h2 style={{
@@ -544,14 +544,14 @@ export default function Home() {
           </div>
 
           {/* Main Grid: Image (left) | Cards (right) */}
-          <div style={{
+          <div className="whats-risk-score-grid" style={{
             display: "grid",
             gridTemplateColumns: "minmax(0, 0.4fr) minmax(0, 0.6fr)",
             gap: 32,
             alignItems: "stretch",
           }}>
             {/* Left: Image with glassmorphism overlay */}
-            <div style={{ position: "relative", borderRadius: 24, overflow: "hidden", height: "100%", minHeight: 400 }}>
+            <div className="whats-risk-score-image" style={{ position: "relative", borderRadius: 24, overflow: "hidden", height: "100%", minHeight: 400 }}>
               <Image
                 src="/hero1.png"
                 alt="Doctor using tablet in clinical setting"
@@ -625,9 +625,9 @@ export default function Home() {
             </div>
 
             {/* Right: Cards */}
-            <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
+            <div className="whats-risk-score-cards" style={{ display: "flex", flexDirection: "column", gap: 20 }}>
               {/* Top row: 2 cards */}
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }}>
+              <div className="whats-risk-score-top-row" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }}>
                 {/* Get Help card */}
                 <div style={{
                   backgroundColor: "white",
@@ -737,12 +737,12 @@ export default function Home() {
         </section>
 
         {/* Why Insurers Choose RiskScore AI Section - full width bg, content same width as other sections */}
-        <section style={{
+        <section className="why-insurers" style={{
           width: "100%",
           backgroundColor: "#F6F6F6",
           padding: "80px 0",
         }}>
-          <div style={{
+          <div className="why-insurers-grid" style={{
             maxWidth: 1200,
             margin: "0 auto",
             padding: "0 32px",
@@ -791,7 +791,7 @@ export default function Home() {
               </button>
             </div>
             {/* Right: Image - square, smaller */}
-            <div style={{ borderRadius: 24, overflow: "hidden", aspectRatio: "1 / 1", maxWidth: 380, justifySelf: "end", marginRight: 24 }}>
+            <div className="why-insurers-image" style={{ borderRadius: 24, overflow: "hidden", aspectRatio: "1 / 1", maxWidth: 380, justifySelf: "end", marginRight: 24 }}>
               <Image
                 src="/hero2.png"
                 alt="Medical professionals reviewing documentation"
@@ -809,12 +809,12 @@ export default function Home() {
         </section>
 
         {/* Features Section - 3 cards */}
-        <section style={{
+        <section className="features-section" style={{
           width: "100%",
           backgroundColor: "white",
           padding: "80px 0",
         }}>
-          <div style={{
+          <div className="features-grid" style={{
             maxWidth: 1200,
             margin: "0 auto",
             padding: "0 32px",
@@ -963,7 +963,7 @@ export default function Home() {
         </section>
 
         {/* Risk Score AI Scoring Methodology Section */}
-        <section style={{
+        <section className="scoring-methodology" style={{
           width: "100%",
           backgroundColor: "#F7F7F7",
           padding: "80px 0",
@@ -974,7 +974,7 @@ export default function Home() {
             padding: "0 32px",
           }}>
             {/* Header */}
-            <div style={{ textAlign: "center", marginBottom: 48 }}>
+            <div className="scoring-methodology-header" style={{ textAlign: "center", marginBottom: 48 }}>
               <h2 style={{
                 fontSize: 36,
                 fontWeight: 700,
@@ -996,14 +996,14 @@ export default function Home() {
             </div>
 
             {/* Two-column: Text blocks (left) | Image (right) */}
-            <div style={{
+            <div className="scoring-methodology-grid" style={{
               display: "grid",
               gridTemplateColumns: "minmax(0, 0.45fr) minmax(0, 0.55fr)",
               gap: 48,
               alignItems: "center",
             }}>
               {/* Left: Two text blocks */}
-              <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
+              <div className="scoring-methodology-text" style={{ display: "flex", flexDirection: "column", gap: 24 }}>
                 {/* Block 1: White card with purple left border */}
                 <div style={{
                   backgroundColor: "white",
@@ -1047,7 +1047,7 @@ export default function Home() {
               </div>
 
               {/* Right: Image */}
-              <div style={{ borderRadius: 24, overflow: "hidden", width: 623, height: 344 }}>
+              <div className="scoring-methodology-image" style={{ borderRadius: 24, overflow: "hidden", width: 623, height: 344 }}>
                 <Image
                   src="/hero3.png"
                   alt="Professional reviewing data dashboards"
@@ -1067,7 +1067,7 @@ export default function Home() {
         </section>
 
         {/* The Process Flow Section */}
-        <section style={{
+        <section className="process-flow" style={{
           width: "100%",
           padding: "80px 0",
         }}>
@@ -1091,7 +1091,7 @@ export default function Home() {
             </div>
 
             {/* 5 Cards Row */}
-            <div style={{
+            <div className="process-flow-grid" style={{
               display: "grid",
               gridTemplateColumns: "repeat(5, minmax(0, 1fr))",
               gap: 20,
@@ -1190,12 +1190,12 @@ export default function Home() {
         </section>
 
         {/* Our Methodology Section */}
-        <section style={{
+        <section className="our-methodology" style={{
           width: "100%",
           backgroundColor: "#F7F7F7",
           padding: "80px 0",
         }}>
-          <div style={{
+          <div className="our-methodology-grid" style={{
             maxWidth: 1200,
             margin: "0 auto",
             padding: "0 32px",
@@ -1206,7 +1206,7 @@ export default function Home() {
           }}>
             {/* Left: Heading + Image */}
             <div>
-              <h2 style={{
+              <h2 className="our-methodology-title" style={{
                 fontSize: 44,
                 fontWeight: 700,
                 color: "#1a1a2e",
@@ -1216,7 +1216,7 @@ export default function Home() {
                 Our{" "}
                 <span style={{ color: "#9B72CB" }}>Methodology</span>
               </h2>
-              <div style={{ borderRadius: 24, overflow: "hidden", aspectRatio: "1 / 1", maxWidth: 440 }}>
+              <div className="our-methodology-image" style={{ borderRadius: 24, overflow: "hidden", aspectRatio: "1 / 1", maxWidth: 440 }}>
                 <Image
                   src="/hero2.png"
                   alt="Healthcare professionals reviewing documentation"
@@ -1267,7 +1267,7 @@ export default function Home() {
                 gap: 14,
                 alignSelf: "flex-end",
                 maxWidth: 420,
-              }}>
+              }} className="our-methodology-card-narrow">
                 <div style={{ width: 44, height: 44, borderRadius: "50%", backgroundColor: "#1BA1E3", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
                   <Image src="/shield.svg" alt="" width={22} height={22} />
                 </div>
@@ -1310,7 +1310,7 @@ export default function Home() {
                 gap: 14,
                 alignSelf: "flex-end",
                 maxWidth: 420,
-              }}>
+              }} className="our-methodology-card-narrow">
                 <div style={{ width: 44, height: 44, borderRadius: "50%", backgroundColor: "#A083F1", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
                   <TrendingUp size={22} color="white" strokeWidth={2} />
                 </div>
@@ -1326,26 +1326,26 @@ export default function Home() {
         <div style={{ height: 40 }} />
 
         {/* Footer */}
-        <footer style={{
+        <footer className="footer" style={{
           backgroundColor: "#F8F9FA",
           padding: "48px 32px 24px",
           textAlign: "center",
         }}>
           <div style={{ maxWidth: 1200, margin: "0 auto" }}>
             {/* Logo */}
-            <a href="/" style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 10, textDecoration: "none", marginBottom: 24 }}>
+            <a href="/" className="footer-logo" style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 10, textDecoration: "none", marginBottom: 24 }}>
               <Image src="/logo.svg" alt="RiskScore AI" width={220} height={44} />
             </a>
 
             {/* Primary nav */}
-            <nav style={{ display: "flex", justifyContent: "center", gap: 32, marginBottom: 20 }}>
+            <nav className="footer-primary-nav" style={{ display: "flex", justifyContent: "center", gap: 32, marginBottom: 20 }}>
               <a href="#" style={{ fontSize: 15, fontWeight: 600, color: "#4b5563", textDecoration: "none" }}>Home</a>
               <a href="#" style={{ fontSize: 15, fontWeight: 600, color: "#4b5563", textDecoration: "none" }}>Risk Score Scribe</a>
               <a href="#" style={{ fontSize: 15, fontWeight: 600, color: "#4b5563", textDecoration: "none" }}>Why Us!</a>
             </nav>
 
             {/* Secondary nav */}
-            <nav style={{ display: "flex", justifyContent: "center", gap: 60, marginBottom: 24, flexWrap: "wrap", fontFamily: "var(--font-poppins), 'Poppins', sans-serif" }}>
+            <nav className="footer-secondary-nav" style={{ display: "flex", justifyContent: "center", gap: 60, marginBottom: 24, flexWrap: "wrap", fontFamily: "var(--font-poppins), 'Poppins', sans-serif" }}>
               <a href="#" style={{ fontSize: 14, fontWeight: 400, color: "#444A57", textDecoration: "none" }}>Privacy Policy</a>
               <a href="#" style={{ fontSize: 14, fontWeight: 400, color: "#444A57", textDecoration: "none" }}>Legal</a>
               <a href="#" style={{ fontSize: 14, fontWeight: 400, color: "#444A57", textDecoration: "none" }}>Terms of Use</a>

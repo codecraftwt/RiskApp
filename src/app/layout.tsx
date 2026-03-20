@@ -16,8 +16,11 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Risk App",
+  title: "Risk Score AI",
   description: "Risk management application",
+  icons: {
+    icon: "/mainlogo.svg",
+  },
 };
 
 export default function RootLayout({
