@@ -32,7 +32,7 @@ export default function Home() {
         backdropFilter: "blur(8px)",
       }}>
         <div className="header-inner" style={{
-          maxWidth: 1200, margin: "0 auto",
+          maxWidth: 1400, margin: "0 auto",
           display: "flex", alignItems: "center", justifyContent: "space-between",
           padding: "14px 32px",
         }}>
@@ -87,7 +87,7 @@ export default function Home() {
 
       <main style={{ position: "relative" }}>
         {/* Hero Section */}
-        <section className="hero-section" style={{ maxWidth: 1200, margin: "0 auto", padding: "40px 32px 0" }}>
+        <section className="hero-section" style={{ maxWidth: 1400, margin: "0 auto", padding: "40px 32px 0" }}>
           <div style={{ position: "relative" }}>
             {/* Gradient background with overlays (clipped) */}
             <div className="hero-gradient-bg" style={{
