@@ -734,6 +734,78 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Why Insurers Choose RiskScore AI Section - full width bg, content same width as other sections */}
+        <section style={{
+          width: "100%",
+          backgroundColor: "#F6F6F6",
+          padding: "80px 0",
+        }}>
+          <div style={{
+            maxWidth: 1200,
+            margin: "0 auto",
+            padding: "0 32px",
+            display: "grid",
+            gridTemplateColumns: "minmax(0, 0.6fr) minmax(0, 0.4fr)",
+            gap: 48,
+            alignItems: "center",
+          }}>
+            {/* Left: Text content */}
+            <div style={{ fontFamily: "var(--font-poppins), 'Poppins', sans-serif" }}>
+              <h2 style={{
+                fontSize: 36,
+                fontWeight: 700,
+                color: "#1a1a2e",
+                margin: "0 0 20px",
+                lineHeight: 1.2,
+              }}>
+                Why Insurers
+                <br />
+                Choose <span style={{ color: "#9B72CB" }}>RiskScore AI</span>
+              </h2>
+              <p style={{
+                fontSize: 16,
+                lineHeight: 1.7,
+                color: "rgba(26,26,46,0.75)",
+                margin: "0 0 32px",
+                maxWidth: 520,
+              }}>
+                RiskScore AI™ is a patent-pending solution that empowers both insurers and physicians to evaluate, improve, and protect medical documentation at scale, all without accessing PHI. For providers, it delivers AI-driven feedback that strengthens chart quality, reduces malpractice exposure, and saves valuable time by automating documentation review. For insurers, it provides risk-scored documentation audits that transform how they measure risk, reduce litigation, and improve profitability.
+              </p>
+              <button style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 8,
+                padding: "12px 24px",
+                borderRadius: 9999,
+                backgroundColor: "#9B72CB",
+                border: "none",
+                color: "white",
+                fontSize: 15,
+                fontWeight: 600,
+                cursor: "pointer",
+              }}>
+                Access RiskScore AI
+                <ArrowRight size={18} strokeWidth={2.5} />
+              </button>
+            </div>
+            {/* Right: Image - square, smaller */}
+            <div style={{ borderRadius: 24, overflow: "hidden", aspectRatio: "1 / 1", maxWidth: 380, justifySelf: "end", marginRight: 24 }}>
+              <Image
+                src="/hero2.png"
+                alt="Medical professionals reviewing documentation"
+                width={300}
+                height={300}
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  display: "block",
+                }}
+              />
+            </div>
+          </div>
+        </section>
+
         <div style={{ height: 40 }} />
       </main>
     </div>
