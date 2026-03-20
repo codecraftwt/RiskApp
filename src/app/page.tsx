@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
 import {
   ArrowRight,
   ArrowUpRight,
@@ -22,6 +25,8 @@ const navLinks = [
 ];
 
 export default function Home() {
+  const [scoringActiveBlock, setScoringActiveBlock] = useState(0);
+
   return (
     <div style={{ minHeight: "100vh", backgroundColor: "white", fontFamily: "'Segoe UI', sans-serif" }}>
       {/* Header */}
@@ -67,7 +72,7 @@ export default function Home() {
           </nav>
 
           {/* CTA */}
-          <button className="btn btn-header" style={{
+          <button className="btn btn-header btn-get-started" style={{
             display: "flex", alignItems: "center", gap: 7,
             borderRadius: 50,
             background: "linear-gradient(135deg, #7c5cbf, #9b72cb)",
@@ -233,7 +238,7 @@ export default function Home() {
               </p>
 
               {/* CTA Button */}
-              <button className="btn btn-hero" style={{
+              <button className="btn btn-hero btn-get-started" style={{
                 display: "flex", alignItems: "center", gap: 8,
                 borderRadius: 50,
                 backgroundColor: "white",
@@ -244,7 +249,6 @@ export default function Home() {
                 fontWeight: 700,
                 color: "#1a1a2e",
                 cursor: "pointer",
-                boxShadow: "0 6px 20px rgba(0,0,0,0.12)",
                 letterSpacing: "-0.1px",
               }}>
                 Get Started
@@ -825,7 +829,7 @@ export default function Home() {
             gap: 24,
           }}>
             {/* Card 1 - Orange */}
-            <div style={{
+            <div className="features-card" style={{
               borderRadius: 24,
               border: "1px solid rgba(244,156,70,0.4)",
               background: "linear-gradient(135deg, rgba(244,156,70,0.12) 0%, white 100%)",
@@ -868,7 +872,7 @@ export default function Home() {
             </div>
 
             {/* Card 2 - Blue */}
-            <div style={{
+            <div className="features-card" style={{
               borderRadius: 24,
               border: "1px solid rgba(27,161,227,0.4)",
               background: "linear-gradient(135deg, rgba(27,161,227,0.12) 0%, white 100%)",
@@ -911,7 +915,7 @@ export default function Home() {
             </div>
 
             {/* Card 3 - Red/Pink */}
-            <div style={{
+            <div className="features-card" style={{
               borderRadius: 24,
               border: "1px solid rgba(217,101,112,0.4)",
               background: "linear-gradient(135deg, rgba(217,101,112,0.12) 0%, white 100%)",
@@ -998,13 +1002,21 @@ export default function Home() {
               {/* Left: Two text blocks */}
               <div className="scoring-methodology-text" style={{ display: "flex", flexDirection: "column", gap: 24 }}>
                 {/* Block 1: White card with purple left border */}
-                <div style={{
-                  backgroundColor: "white",
-                  borderRadius: 16,
-                  padding: 24,
-                  borderLeft: "4px solid #9B72CB",
-                  boxShadow: "0 2px 12px rgba(0,0,0,0.04)",
-                }}>
+                <div
+                  role="button"
+                  tabIndex={0}
+                  onClick={() => setScoringActiveBlock(0)}
+                  onKeyDown={(e) => e.key === "Enter" && setScoringActiveBlock(0)}
+                  style={{
+                    backgroundColor: scoringActiveBlock === 0 ? "white" : "transparent",
+                    borderRadius: 16,
+                    padding: 24,
+                    borderLeft: scoringActiveBlock === 0 ? "4px solid #9B72CB" : "4px solid transparent",
+                    boxShadow: scoringActiveBlock === 0 ? "0 4px 16px rgba(155,114,203,0.2)" : "none",
+                    cursor: "pointer",
+                    transition: "background-color 0.2s ease, border-left 0.2s ease, box-shadow 0.2s ease",
+                  }}
+                >
                   <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 12 }}>
                     <Image src="/filetext3.svg" alt="" width={28} height={28} style={{ flexShrink: 0 }} />
                     <h3 style={{ fontSize: 18, fontWeight: 700, color: "#1a1a2e", margin: 0, lineHeight: 1.3 }}>
@@ -1017,7 +1029,21 @@ export default function Home() {
                 </div>
 
                 {/* Block 2: No card, on background */}
-                <div>
+                <div
+                  role="button"
+                  tabIndex={0}
+                  onClick={() => setScoringActiveBlock(1)}
+                  onKeyDown={(e) => e.key === "Enter" && setScoringActiveBlock(1)}
+                  style={{
+                    backgroundColor: scoringActiveBlock === 1 ? "white" : "transparent",
+                    borderRadius: 16,
+                    padding: 24,
+                    borderLeft: scoringActiveBlock === 1 ? "4px solid #9B72CB" : "4px solid transparent",
+                    boxShadow: scoringActiveBlock === 1 ? "0 4px 16px rgba(155,114,203,0.2)" : "none",
+                    cursor: "pointer",
+                    transition: "background-color 0.2s ease, border-left 0.2s ease, box-shadow 0.2s ease",
+                  }}
+                >
                   <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 12 }}>
                     <div style={{
                       width: 40,
@@ -1039,11 +1065,12 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Right: Image */}
+              {/* Right: Image - changes based on active block */}
               <div className="scoring-methodology-image" style={{ borderRadius: 24, overflow: "hidden", width: 623, height: 344 }}>
                 <Image
-                  src="/hero3.png"
-                  alt="Professional reviewing data dashboards"
+                  key={scoringActiveBlock}
+                  src={scoringActiveBlock === 0 ? "/hero3.png" : "/hero2.png"}
+                  alt={scoringActiveBlock === 0 ? "Professional reviewing data dashboards" : "Medical professionals reviewing documentation"}
                   width={623}
                   height={344}
                   style={{
@@ -1090,7 +1117,7 @@ export default function Home() {
               gap: 20,
             }}>
               {/* Step 1 */}
-              <div style={{
+              <div className="process-flow-card" style={{
                 backgroundColor: "white",
                 borderRadius: 24,
                 padding: 24,
@@ -1108,7 +1135,7 @@ export default function Home() {
               </div>
 
               {/* Step 2 */}
-              <div style={{
+              <div className="process-flow-card" style={{
                 backgroundColor: "white",
                 borderRadius: 24,
                 padding: 24,
@@ -1126,7 +1153,7 @@ export default function Home() {
               </div>
 
               {/* Step 3 */}
-              <div style={{
+              <div className="process-flow-card" style={{
                 backgroundColor: "white",
                 borderRadius: 24,
                 padding: 24,
@@ -1144,7 +1171,7 @@ export default function Home() {
               </div>
 
               {/* Step 4 */}
-              <div style={{
+              <div className="process-flow-card" style={{
                 backgroundColor: "white",
                 borderRadius: 24,
                 padding: 24,
@@ -1162,7 +1189,7 @@ export default function Home() {
               </div>
 
               {/* Step 5 */}
-              <div style={{
+              <div className="process-flow-card" style={{
                 backgroundColor: "white",
                 borderRadius: 24,
                 padding: 24,
@@ -1228,7 +1255,7 @@ export default function Home() {
             {/* Right: 4 Cards */}
             <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
               {/* Card 1 */}
-              <div style={{
+              <div className="our-methodology-card" style={{
                 backgroundColor: "white",
                 borderRadius: 18,
                 padding: 20,
@@ -1260,7 +1287,7 @@ export default function Home() {
                 gap: 14,
                 alignSelf: "flex-end",
                 maxWidth: 420,
-              }} className="our-methodology-card-narrow">
+              }} className="our-methodology-card our-methodology-card-narrow">
                 <div style={{ width: 44, height: 44, borderRadius: "50%", backgroundColor: "#1BA1E3", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
                   <Image src="/shield.svg" alt="" width={22} height={22} />
                 </div>
@@ -1271,7 +1298,7 @@ export default function Home() {
               </div>
 
               {/* Card 3 */}
-              <div style={{
+              <div className="our-methodology-card" style={{
                 backgroundColor: "white",
                 borderRadius: 18,
                 padding: 20,
@@ -1303,7 +1330,7 @@ export default function Home() {
                 gap: 14,
                 alignSelf: "flex-end",
                 maxWidth: 420,
-              }} className="our-methodology-card-narrow">
+              }} className="our-methodology-card our-methodology-card-narrow">
                 <div style={{ width: 44, height: 44, borderRadius: "50%", backgroundColor: "#A083F1", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
                   <TrendingUp size={22} color="white" strokeWidth={2} />
                 </div>

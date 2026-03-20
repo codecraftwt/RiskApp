@@ -47,13 +47,22 @@ body {
   color: var(--foreground);
 }
 
+/* Get Started buttons - base + hover shadow */
+.btn-get-started {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12) !important;
+}
+.btn-get-started:hover {
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18) !important;
+}
+
 /* Button hover effects */
 .btn {
-  transition: opacity 0.2s ease, transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  transition: opacity 0.2s ease, transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 .btn:hover {
   opacity: 0.9;
   transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 }
 .btn:active {
   opacity: 0.8;
@@ -63,13 +72,41 @@ body {
   background-color: transparent !important;
   color: #1a1a2e !important;
   border: 1px solid #1a1a2e !important;
-  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease, transform 0.2s ease !important;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease !important;
 }
 .btn-outline:hover {
   background-color: #1a1a2e !important;
   color: white !important;
   border-color: #1a1a2e !important;
   opacity: 1 !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Features section cards - hover effect */
+.features-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.features-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Our Methodology cards - hover effect */
+.our-methodology-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.our-methodology-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Process Flow cards - hover effect */
+.process-flow-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.process-flow-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
 /* Hero heading - ensure horizontal centering */
