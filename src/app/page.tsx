@@ -1064,6 +1064,129 @@ export default function Home() {
           </div>
         </section>
 
+        {/* The Process Flow Section */}
+        <section style={{
+          width: "100%",
+          padding: "80px 0",
+        }}>
+          <div style={{
+            maxWidth: 1200,
+            margin: "0 auto",
+            padding: "0 32px",
+          }}>
+            {/* Header */}
+            <div style={{ textAlign: "center", marginBottom: 48 }}>
+              <h2 style={{
+                fontSize: 36,
+                fontWeight: 700,
+                color: "#1a1a2e",
+                margin: 0,
+                lineHeight: 1.2,
+              }}>
+                The{" "}
+                <span style={{ color: "#9B72CB" }}>Process Flow</span>
+              </h2>
+            </div>
+
+            {/* 5 Cards Row */}
+            <div style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(5, minmax(0, 1fr))",
+              gap: 20,
+            }}>
+              {/* Step 1 */}
+              <div style={{
+                backgroundColor: "white",
+                borderRadius: 24,
+                padding: 24,
+                boxShadow: "0 8px 32px rgba(0,0,0,0.12)",
+                border: "1px solid rgba(0,0,0,0.04)",
+              }}>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 16 }}>
+                  <div style={{ width: 36, height: 36, borderRadius: "50%", backgroundColor: "#F49C46", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                    <Image src="/filetext4.svg" alt="" width={18} height={18} />
+                  </div>
+                  <span style={{ fontSize: 12, fontWeight: 600, color: "#1a1a2e", padding: "4px 12px", borderRadius: 9999, border: "1px solid rgba(26,26,46,0.2)" }}>Step 1</span>
+                </div>
+                <h3 style={{ fontSize: 16, fontWeight: 700, color: "#1a1a2e", margin: "0 0 8px", lineHeight: 1.3 }}>Medical Note (Text)</h3>
+                <p style={{ fontSize: 14, lineHeight: 1.5, color: "rgba(26,26,46,0.7)", margin: 0 }}>Clinician notes are entered or imported.</p>
+              </div>
+
+              {/* Step 2 */}
+              <div style={{
+                backgroundColor: "white",
+                borderRadius: 24,
+                padding: 24,
+                boxShadow: "0 8px 32px rgba(0,0,0,0.12)",
+                border: "1px solid rgba(0,0,0,0.04)",
+              }}>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 16 }}>
+                  <div style={{ width: 36, height: 36, borderRadius: "50%", backgroundColor: "#5489D6", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                    <Image src="/eye.svg" alt="" width={18} height={18} />
+                  </div>
+                  <span style={{ fontSize: 12, fontWeight: 600, color: "#1a1a2e", padding: "4px 12px", borderRadius: 9999, border: "1px solid rgba(26,26,46,0.2)" }}>Step 2</span>
+                </div>
+                <h3 style={{ fontSize: 16, fontWeight: 700, color: "#1a1a2e", margin: "0 0 8px", lineHeight: 1.3 }}>AI Analysis</h3>
+                <p style={{ fontSize: 14, lineHeight: 1.5, color: "rgba(26,26,46,0.7)", margin: 0 }}>AI reviews note structure and clarity.</p>
+              </div>
+
+              {/* Step 3 */}
+              <div style={{
+                backgroundColor: "white",
+                borderRadius: 24,
+                padding: 24,
+                boxShadow: "0 8px 32px rgba(0,0,0,0.12)",
+                border: "1px solid rgba(0,0,0,0.04)",
+              }}>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 16 }}>
+                  <div style={{ width: 36, height: 36, borderRadius: "50%", backgroundColor: "#1BA1E3", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                    <Image src="/pencil.svg" alt="" width={18} height={18} />
+                  </div>
+                  <span style={{ fontSize: 12, fontWeight: 600, color: "#1a1a2e", padding: "4px 12px", borderRadius: 9999, border: "1px solid rgba(26,26,46,0.2)" }}>Step 3</span>
+                </div>
+                <h3 style={{ fontSize: 16, fontWeight: 700, color: "#1a1a2e", margin: "0 0 8px", lineHeight: 1.3 }}>Content Extraction</h3>
+                <p style={{ fontSize: 14, lineHeight: 1.5, color: "rgba(26,26,46,0.7)", margin: 0 }}>Key elements: diagnosis, history, exam, plan, risks.</p>
+              </div>
+
+              {/* Step 4 */}
+              <div style={{
+                backgroundColor: "white",
+                borderRadius: 24,
+                padding: 24,
+                boxShadow: "0 8px 32px rgba(0,0,0,0.12)",
+                border: "1px solid rgba(0,0,0,0.04)",
+              }}>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 16 }}>
+                  <div style={{ width: 36, height: 36, borderRadius: "50%", backgroundColor: "#D96570", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                    <Image src="/bar.svg" alt="" width={14} height={14} />
+                  </div>
+                  <span style={{ fontSize: 12, fontWeight: 600, color: "#1a1a2e", padding: "4px 12px", borderRadius: 9999, border: "1px solid rgba(26,26,46,0.2)" }}>Step 4</span>
+                </div>
+                <h3 style={{ fontSize: 16, fontWeight: 700, color: "#1a1a2e", margin: "0 0 8px", lineHeight: 1.3 }}>Scoring Algorithm</h3>
+                <p style={{ fontSize: 14, lineHeight: 1.5, color: "rgba(26,26,46,0.7)", margin: 0 }}>A model engine evaluates gaps and docs.</p>
+              </div>
+
+              {/* Step 5 */}
+              <div style={{
+                backgroundColor: "white",
+                borderRadius: 24,
+                padding: 24,
+                boxShadow: "0 8px 32px rgba(0,0,0,0.12)",
+                border: "1px solid rgba(0,0,0,0.04)",
+              }}>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 16 }}>
+                  <div style={{ width: 36, height: 36, borderRadius: "50%", backgroundColor: "#A083F1", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                    <Image src="/wrench.svg" alt="" width={18} height={18} />
+                  </div>
+                  <span style={{ fontSize: 12, fontWeight: 600, color: "#1a1a2e", padding: "4px 12px", borderRadius: 9999, border: "1px solid rgba(26,26,46,0.2)" }}>Step 5</span>
+                </div>
+                <h3 style={{ fontSize: 16, fontWeight: 700, color: "#1a1a2e", margin: "0 0 8px", lineHeight: 1.3 }}>Risk Score (0-100)</h3>
+                <p style={{ fontSize: 14, lineHeight: 1.5, color: "rgba(26,26,46,0.7)", margin: 0 }}>Get a clear score with tips to improve.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <div style={{ height: 40 }} />
       </main>
     </div>
