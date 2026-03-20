@@ -508,6 +508,232 @@ export default function Home() {
           </div>
         </section>
 
+        {/* What's Risk Score AI Section */}
+        <section style={{ maxWidth: 1200, margin: "0 auto", padding: "100px 32px 80px" }}>
+          {/* Header */}
+          <div style={{ textAlign: "center", marginBottom: 48 }}>
+            <h2 style={{
+              fontSize: 36,
+              fontWeight: 700,
+              color: "#1a1a2e",
+              margin: "0 0 16px",
+              lineHeight: 1.2,
+            }}>
+              What&apos;s{" "}
+              <span style={{
+                background: "linear-gradient(135deg, #9B72CB, #5489D6)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+              }}>
+                Risk Score AI
+              </span>
+            </h2>
+            <p style={{
+              maxWidth: 1000,
+              margin: "0 auto",
+              fontSize: 16,
+              lineHeight: 1.7,
+              color: "rgba(26,26,46,0.7)",
+            }}>
+              <span style={{ display: "block", whiteSpace: "nowrap" }}>Every malpractice case hinges on one thing: the note. Was it documented? Was it complete? Was it timely? RiskScore AI™ turns</span>
+              <span style={{ display: "block", whiteSpace: "nowrap" }}>documentation into a defense strategy, by scoring each note for clarity, completeness, & compliance.</span>
+            </p>
+          </div>
+
+          {/* Main Grid: Image (left) | Cards (right) */}
+          <div style={{
+            display: "grid",
+            gridTemplateColumns: "minmax(0, 0.4fr) minmax(0, 0.6fr)",
+            gap: 32,
+            alignItems: "stretch",
+          }}>
+            {/* Left: Image with glassmorphism overlay */}
+            <div style={{ position: "relative", borderRadius: 24, overflow: "hidden", height: "100%", minHeight: 400 }}>
+              <Image
+                src="/hero1.png"
+                alt="Doctor using tablet in clinical setting"
+                width={480}
+                height={640}
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  display: "block",
+                }}
+              />
+              {/* Glassmorphism overlay card - bottom left */}
+              <div style={{
+                position: "absolute",
+                bottom: 20,
+                left: 20,
+                padding: 16,
+                borderRadius: 20,
+                backgroundColor: "rgba(255,255,255,0.25)",
+                backdropFilter: "blur(20px)",
+                WebkitBackdropFilter: "blur(20px)",
+                border: "1px solid rgba(255,255,255,0.5)",
+                display: "flex",
+                alignItems: "center",
+                gap: 16,
+                maxWidth: 220,
+              }}>
+                {/* Donut chart: Outpatient 72%, Specialty 19%, Hospital 9% */}
+                <div style={{ position: "relative", flexShrink: 0 }}>
+                  <svg width="56" height="56" viewBox="0 0 46 46">
+                    <circle cx="23" cy="23" r="17" fill="none" stroke="rgba(255,255,255,0.4)" strokeWidth="5" />
+                    <circle cx="23" cy="23" r="17" fill="none" stroke="#D96570" strokeWidth="5"
+                      strokeDasharray="77 30" strokeDashoffset="0" strokeLinecap="round"
+                      transform="rotate(-90 23 23)" />
+                    <circle cx="23" cy="23" r="17" fill="none" stroke="#F49C46" strokeWidth="5"
+                      strokeDasharray="20 87" strokeDashoffset="-79" strokeLinecap="round"
+                      transform="rotate(-90 23 23)" />
+                    <circle cx="23" cy="23" r="17" fill="none" stroke="rgba(255,255,255,0.6)" strokeWidth="5"
+                      strokeDasharray="10 97" strokeDashoffset="-101" strokeLinecap="round"
+                      transform="rotate(-90 23 23)" />
+                  </svg>
+                  <span style={{
+                    position: "absolute",
+                    top: "50%",
+                    left: "50%",
+                    transform: "translate(-50%, -50%)",
+                    fontSize: 14,
+                    fontWeight: 700,
+                    color: "white",
+                  }}>
+                    72%
+                  </span>
+                </div>
+                {/* Legend */}
+                <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                    <div style={{ width: 8, height: 8, borderRadius: "50%", backgroundColor: "#D96570", flexShrink: 0 }} />
+                    <span style={{ fontSize: 12, color: "white", fontWeight: 500 }}>Outpatient: 72%</span>
+                  </div>
+                  <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                    <div style={{ width: 8, height: 8, borderRadius: "50%", backgroundColor: "#F49C46", flexShrink: 0 }} />
+                    <span style={{ fontSize: 12, color: "white", fontWeight: 500 }}>Specialty: 19%</span>
+                  </div>
+                  <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                    <div style={{ width: 8, height: 8, borderRadius: "50%", backgroundColor: "rgba(255,255,255,0.8)", flexShrink: 0 }} />
+                    <span style={{ fontSize: 12, color: "white", fontWeight: 500 }}>Hospital: 9%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right: Cards */}
+            <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
+              {/* Top row: 2 cards */}
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }}>
+                {/* Get Help card */}
+                <div style={{
+                  backgroundColor: "white",
+                  borderRadius: 20,
+                  padding: 24,
+                  boxShadow: "0 4px 24px rgba(0,0,0,0.06)",
+                  border: "1px solid rgba(0,0,0,0.04)",
+                  position: "relative",
+                }}>
+                  <div style={{
+                    position: "absolute",
+                    top: 20,
+                    right: 20,
+                    width: 40,
+                    height: 40,
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}>
+                    <Image src="/globe.svg" alt="" width={30} height={30} />
+                  </div>
+                  <h3 style={{ fontSize: 18, fontWeight: 700, color: "#1a1a2e", margin: "0 0 10px" }}>Get Help</h3>
+                  <p style={{ fontSize: 14, lineHeight: 1.6, color: "rgba(26,26,46,0.7)", margin: 0 }}>
+                    Get fast, reliable help whenever you need it. Our team is available to assist with onboarding, setup, and day-to-day questions.
+                  </p>
+                </div>
+                {/* Clearer Notes card */}
+                <div style={{
+                  backgroundColor: "white",
+                  borderRadius: 20,
+                  padding: 24,
+                  boxShadow: "0 4px 24px rgba(0,0,0,0.06)",
+                  border: "1px solid rgba(0,0,0,0.04)",
+                  position: "relative",
+                }}>
+                  <div style={{
+                    position: "absolute",
+                    top: 20,
+                    right: 20,
+                    width: 40,
+                    height: 40,
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}>
+                    <Image src="/filetext2.svg" alt="" width={25} height={25} />
+                  </div>
+                  <h3 style={{ fontSize: 18, fontWeight: 700, color: "#1a1a2e", margin: "0 0 10px" }}>Clearer Notes, Better<br />Coverage</h3>
+                  <p style={{ fontSize: 14, lineHeight: 1.6, color: "rgba(26,26,46,0.7)", margin: 0 }}>
+                    Generate structured notes in real time & improve documentation clarity across your team.
+                  </p>
+                </div>
+              </div>
+
+              {/* Bottom: Clarity Trend card */}
+              <div style={{
+                backgroundColor: "white",
+                borderRadius: 20,
+                padding: 24,
+                boxShadow: "0 4px 24px rgba(0,0,0,0.06)",
+                border: "1px solid rgba(0,0,0,0.04)",
+                position: "relative",
+                fontFamily: "var(--font-poppins), 'Poppins', sans-serif",
+              }}>
+                <span style={{
+                  position: "absolute",
+                  top: 20,
+                  right: 20,
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: 4,
+                  padding: "4px 10px",
+                  borderRadius: 50,
+                  backgroundColor: "#dcfce7",
+                  fontSize: 12,
+                  fontWeight: 600,
+                  color: "#15803d",
+                }}>
+                  +8%
+                  <TrendingUp size={14} strokeWidth={2} />
+                </span>
+                <p style={{ fontSize: 12, color: "rgba(26,26,46,0.5)", textTransform: "uppercase", letterSpacing: "0.5px", margin: "0 0 8px" }}>Clarity Trend</p>
+                <p style={{ fontSize: 32, fontWeight: 700, color: "#1a1a2e", margin: "0 0 20px" }}>92/100</p>
+                {/* Bar chart */}
+                <div style={{ display: "flex", gap: 8, alignItems: "flex-end", height: 150, marginBottom: 12, borderRadius: 20 }}>
+                  {[30, 50, 80, 90, 30, 60, 70, 50, 80, 60, 100].map((h, i) => (
+                    <div
+                      key={i}
+                      style={{
+                        flex: 1,
+                        height: `${h}%`,
+                        minHeight: 8,
+                        borderRadius: 8,
+                        backgroundColor: i === 10 ? "#F49C46" : "rgba(244,156,70,0.2)",
+                      }}
+                    />
+                  ))}
+                </div>
+                <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 8, fontSize: 12, color: "rgba(26,26,46,0.5)" }}>
+                  <span>Last Month</span>
+                  <span>Current</span>
+                </div>
+                <p style={{ fontSize: 13, color: "rgba(26,26,46,0.6)", margin: 0, fontWeight: 600 }}>Monthly improvement tracked across team</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <div style={{ height: 40 }} />
       </main>
     </div>
