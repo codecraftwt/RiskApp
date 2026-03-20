@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+/* stylelint-disable at-rule-no-unknown */
 /* Brand Colors */
 :root {
   --background: #F3F2F7;
@@ -16,7 +17,7 @@
   --color-surface: #F3F2F7;
 }
 
-@theme inline {
+@theme {
   /* Background & Text */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -32,6 +33,7 @@
   --font-heading: var(--font-urbanist), ui-sans-serif, system-ui, sans-serif;
   --font-body: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
 }
+/* stylelint-enable at-rule-no-unknown */
 
 /* Typography utilities */
 h1, h2, h3, h4, h5, h6 {
@@ -43,6 +45,31 @@ body {
   font-family: var(--font-body);
   background: var(--background);
   color: var(--foreground);
+}
+
+/* Button hover effects */
+.btn {
+  transition: opacity 0.2s ease, transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+.btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+.btn:active {
+  opacity: 0.8;
+}
+/* Learn More - outline buttons: base + bg change on hover */
+.btn-outline {
+  background-color: transparent !important;
+  color: #1a1a2e !important;
+  border: 1px solid #1a1a2e !important;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease, transform 0.2s ease !important;
+}
+.btn-outline:hover {
+  background-color: #1a1a2e !important;
+  color: white !important;
+  border-color: #1a1a2e !important;
+  opacity: 1 !important;
 }
 
 /* Hero heading - ensure horizontal centering */

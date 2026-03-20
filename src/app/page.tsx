@@ -67,7 +67,7 @@ export default function Home() {
           </nav>
 
           {/* CTA */}
-          <button style={{
+          <button className="btn btn-header" style={{
             display: "flex", alignItems: "center", gap: 7,
             borderRadius: 50,
             background: "linear-gradient(135deg, #7c5cbf, #9b72cb)",
@@ -188,7 +188,7 @@ export default function Home() {
             {/* Hero content */}
             <div className="hero-content" style={{ position: "relative", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", padding: "80px 60px 0" }}>
               {/* Badge */}
-              <a href="#" style={{
+              <a href="#" className="btn" style={{
                 display: "inline-flex", alignItems: "center", gap: 6,
                 borderRadius: 50,
                 backgroundColor: "rgba(255,255,255,0.22)",
@@ -233,7 +233,7 @@ export default function Home() {
               </p>
 
               {/* CTA Button */}
-              <button style={{
+              <button className="btn btn-hero" style={{
                 display: "flex", alignItems: "center", gap: 8,
                 borderRadius: 50,
                 backgroundColor: "white",
@@ -775,7 +775,7 @@ export default function Home() {
               }}>
                 RiskScore AI™ is a patent-pending solution that empowers both insurers and physicians to evaluate, improve, and protect medical documentation at scale, all without accessing PHI. For providers, it delivers AI-driven feedback that strengthens chart quality, reduces malpractice exposure, and saves valuable time by automating documentation review. For insurers, it provides risk-scored documentation audits that transform how they measure risk, reduce litigation, and improve profitability.
               </p>
-              <button style={{
+              <button className="btn btn-purple" style={{
                 display: "inline-flex",
                 alignItems: "center",
                 gap: 8,
@@ -852,15 +852,12 @@ export default function Home() {
               <p style={{ fontSize: 15, lineHeight: 1.6, color: "rgba(26,26,46,0.75)", margin: "0 0 24px", flex: 1 }}>
                 Evaluates structure, rationale, follow-ups, consent, & more.
               </p>
-              <button style={{
+              <button className="btn btn-outline" style={{
                 display: "inline-flex",
                 alignItems: "center",
                 gap: 8,
                 padding: "10px 20px",
                 borderRadius: 9999,
-                backgroundColor: "transparent",
-                border: "1px solid #1a1a2e",
-                color: "#1a1a2e",
                 fontSize: 14,
                 fontWeight: 600,
                 cursor: "pointer",
@@ -898,15 +895,12 @@ export default function Home() {
               <p style={{ fontSize: 15, lineHeight: 1.6, color: "rgba(26,26,46,0.75)", margin: "0 0 24px", flex: 1 }}>
                 Flag at-risk providers. Track trends. Intervene early.
               </p>
-              <button style={{
+              <button className="btn btn-outline" style={{
                 display: "inline-flex",
                 alignItems: "center",
                 gap: 8,
                 padding: "10px 20px",
                 borderRadius: 9999,
-                backgroundColor: "transparent",
-                border: "1px solid #1a1a2e",
-                color: "#1a1a2e",
                 fontSize: 14,
                 fontWeight: 600,
                 cursor: "pointer",
@@ -944,15 +938,12 @@ export default function Home() {
               <p style={{ fontSize: 15, lineHeight: 1.6, color: "rgba(26,26,46,0.75)", margin: "0 0 24px", flex: 1 }}>
                 Fully HIPAA-compliant. No protected health data accessed or stored.
               </p>
-              <button style={{
+              <button className="btn btn-outline" style={{
                 display: "inline-flex",
                 alignItems: "center",
                 gap: 8,
                 padding: "10px 20px",
                 borderRadius: 9999,
-                backgroundColor: "transparent",
-                border: "1px solid #1a1a2e",
-                color: "#1a1a2e",
                 fontSize: 14,
                 fontWeight: 600,
                 cursor: "pointer",
