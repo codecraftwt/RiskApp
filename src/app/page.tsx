@@ -806,6 +806,160 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Features Section - 3 cards */}
+        <section style={{
+          width: "100%",
+          backgroundColor: "#f8f7ff",
+          padding: "80px 0",
+        }}>
+          <div style={{
+            maxWidth: 1200,
+            margin: "0 auto",
+            padding: "0 32px",
+            display: "grid",
+            gridTemplateColumns: "repeat(3, 1fr)",
+            gap: 24,
+          }}>
+            {/* Card 1 - Orange */}
+            <div style={{
+              borderRadius: 24,
+              border: "1px solid rgba(244,156,70,0.4)",
+              background: "linear-gradient(135deg, rgba(244,156,70,0.12) 0%, white 100%)",
+              padding: 28,
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "flex-start",
+            }}>
+              <div style={{
+                width: 48,
+                height: 48,
+                borderRadius: "50%",
+                backgroundColor: "#F49C46",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                marginBottom: 20,
+              }}>
+                <Image src="/sparcle.svg" alt="" width={20} height={20} />
+              </div>
+              <h3 style={{ fontSize: 18, fontWeight: 700, color: "#1a1a2e", margin: "0 0 12px", lineHeight: 1.3 }}>
+                Scoring Audits of Clinical Notes
+              </h3>
+              <p style={{ fontSize: 15, lineHeight: 1.6, color: "rgba(26,26,46,0.75)", margin: "0 0 24px", flex: 1 }}>
+                Evaluates structure, rationale, follow-ups, consent, & more.
+              </p>
+              <button style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 8,
+                padding: "10px 20px",
+                borderRadius: 9999,
+                backgroundColor: "transparent",
+                border: "1px solid #1a1a2e",
+                color: "#1a1a2e",
+                fontSize: 14,
+                fontWeight: 600,
+                cursor: "pointer",
+              }}>
+                Learn More
+                <ArrowRight size={16} strokeWidth={2} />
+              </button>
+            </div>
+
+            {/* Card 2 - Blue */}
+            <div style={{
+              borderRadius: 24,
+              border: "1px solid rgba(27,161,227,0.4)",
+              background: "linear-gradient(135deg, rgba(27,161,227,0.12) 0%, white 100%)",
+              padding: 28,
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "flex-start",
+            }}>
+              <div style={{
+                width: 48,
+                height: 48,
+                borderRadius: "50%",
+                backgroundColor: "#1BA1E3",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                marginBottom: 20,
+              }}>
+                <Image src="/bar.svg" alt="" width={20} height={20} />
+              </div>
+              <h3 style={{ fontSize: 18, fontWeight: 700, color: "#1a1a2e", margin: "0 0 12px", lineHeight: 1.3 }}>
+                Risk Mitigation Dashboard
+              </h3>
+              <p style={{ fontSize: 15, lineHeight: 1.6, color: "rgba(26,26,46,0.75)", margin: "0 0 24px", flex: 1 }}>
+                Flag at-risk providers. Track trends. Intervene early.
+              </p>
+              <button style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 8,
+                padding: "10px 20px",
+                borderRadius: 9999,
+                backgroundColor: "transparent",
+                border: "1px solid #1a1a2e",
+                color: "#1a1a2e",
+                fontSize: 14,
+                fontWeight: 600,
+                cursor: "pointer",
+              }}>
+                Learn More
+                <ArrowRight size={16} strokeWidth={2} />
+              </button>
+            </div>
+
+            {/* Card 3 - Red/Pink */}
+            <div style={{
+              borderRadius: 24,
+              border: "1px solid rgba(217,101,112,0.4)",
+              background: "linear-gradient(135deg, rgba(217,101,112,0.12) 0%, white 100%)",
+              padding: 28,
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "flex-start",
+            }}>
+              <div style={{
+                width: 48,
+                height: 48,
+                borderRadius: "50%",
+                backgroundColor: "#D96570",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                marginBottom: 20,
+              }}>
+                <Image src="/database.svg" alt="" width={24} height={24} />
+              </div>
+              <h3 style={{ fontSize: 18, fontWeight: 700, color: "#1a1a2e", margin: "0 0 12px", lineHeight: 1.3 }}>
+                Zero PHI Required HIPAA-compliant
+              </h3>
+              <p style={{ fontSize: 15, lineHeight: 1.6, color: "rgba(26,26,46,0.75)", margin: "0 0 24px", flex: 1 }}>
+                Fully HIPAA-compliant. No protected health data accessed or stored.
+              </p>
+              <button style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 8,
+                padding: "10px 20px",
+                borderRadius: 9999,
+                backgroundColor: "transparent",
+                border: "1px solid #1a1a2e",
+                color: "#1a1a2e",
+                fontSize: 14,
+                fontWeight: 600,
+                cursor: "pointer",
+              }}>
+                Learn More
+                <ArrowRight size={16} strokeWidth={2} />
+              </button>
+            </div>
+          </div>
+        </section>
+
         <div style={{ height: 40 }} />
       </main>
     </div>
