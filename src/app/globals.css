@@ -249,6 +249,10 @@ body {
     border-bottom-left-radius: 16px !important;
     border-bottom-right-radius: 16px !important;
   }
+  .hero-card-left {
+    height: auto !important;
+    min-height: 140px !important;
+  }
   .hero-card-middle {
     margin-top: 0 !important;
     transform: none !important;
@@ -260,8 +264,40 @@ body {
   .hero-card-status-badges {
     flex-wrap: wrap !important;
   }
+  .hero-card-right {
+    height: auto !important;
+    min-height: 140px !important;
+  }
   .hero-card-right-row2 {
     flex-wrap: wrap !important;
+  }
+  /* Hero card left - stack layout on mobile, fix text overflow */
+  .hero-card-left-inner {
+    flex-wrap: wrap !important;
+    height: auto !important;
+  }
+  .hero-card-left-text {
+    min-width: 0 !important;
+    flex: 1 1 100% !important;
+  }
+  .hero-card-left-desc {
+    overflow-wrap: break-word !important;
+    word-wrap: break-word !important;
+    min-width: 0 !important;
+  }
+  .hero-card-left-stats {
+    flex-shrink: 0 !important;
+  }
+
+  /* Hero card right */
+  .hero-card-right-text {
+    min-width: 0 !important;
+    flex: 1 1 100% !important;
+  }
+  .hero-card-right-desc {
+    overflow-wrap: break-word !important;
+    word-wrap: break-word !important;
+    min-width: 0 !important;
   }
 
   /* What's Risk Score - top row cards stack */

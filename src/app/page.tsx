@@ -272,9 +272,9 @@ export default function Home() {
               padding: 16,
               boxShadow: "0 8px 32px rgba(0,0,0,0.08)",
             }}>
-              <div style={{ display: "flex", alignItems: "stretch", justifyContent: "space-between", gap: 16, height: "100%" }}>
+              <div className="hero-card-left-inner" style={{ display: "flex", alignItems: "stretch", justifyContent: "space-between", gap: 16, height: "100%" }}>
                 {/* Left side: logo + text */}
-                <div style={{ display: "flex", flexDirection: "column", gap: 8, flex: 1, minWidth: 0 }}>
+                <div className="hero-card-left-text" style={{ display: "flex", flexDirection: "column", gap: 8, flex: 1, minWidth: 0 }}>
                   <div style={{
                     width: 32, height: 32,
                     borderRadius: 50,
@@ -288,12 +288,12 @@ export default function Home() {
                   <h4 style={{ fontWeight: 800, fontSize: 16, color: "#1a1a2e", margin: 0 }}>
                     Scoring Audits of Clinical Notes
                   </h4>
-                  <p style={{ fontSize: 12, lineHeight: 1.5, color: "rgba(26,26,46,0.7)", margin: 0 }}>
+                  <p className="hero-card-left-desc" style={{ fontSize: 12, lineHeight: 1.5, color: "rgba(26,26,46,0.7)", margin: 0 }}>
                     Evaluates structure, rationale, follow-ups, consent, &amp; more.
                   </p>
                 </div>
                 {/* Right side: 97% + mini bar chart */}
-                <div style={{
+                <div className="hero-card-left-stats" style={{
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "flex-end",
@@ -458,13 +458,13 @@ export default function Home() {
               {/* Row 2: Left div (header + text) | Right div (donut chart) */}
               <div className="hero-card-right-row2" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 16 }}>
                 {/* Left div */}
-                <div style={{ flex: 1, minWidth: 0 }}>
+                <div className="hero-card-right-text" style={{ flex: 1, minWidth: 0 }}>
                   <h4 className="hero-card-right-title" style={{ fontWeight: 800, fontSize: 16, color: "#1a1a2e", marginBottom: 6, lineHeight: 1.3 }}>
                     <span style={{ whiteSpace: "nowrap" }}>Zero PHI Required HIPAA</span>
                     <br />
                     -compliant
                   </h4>
-                  <p style={{ fontSize: 14, lineHeight: 1.5, color: "rgba(26,26,46,0.7)", margin: 0 }}>
+                  <p className="hero-card-right-desc" style={{ fontSize: 14, lineHeight: 1.5, color: "rgba(26,26,46,0.7)", margin: 0 }}>
                     Fully HIPAA-compliant. No protected health data accessed or stored.
                   </p>
                 </div>
