@@ -1324,6 +1324,41 @@ export default function Home() {
         </section>
 
         <div style={{ height: 40 }} />
+
+        {/* Footer */}
+        <footer style={{
+          backgroundColor: "#F8F9FA",
+          padding: "48px 32px 24px",
+          textAlign: "center",
+        }}>
+          <div style={{ maxWidth: 1200, margin: "0 auto" }}>
+            {/* Logo */}
+            <a href="/" style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 10, textDecoration: "none", marginBottom: 24 }}>
+              <Image src="/logo.svg" alt="RiskScore AI" width={220} height={44} />
+            </a>
+
+            {/* Primary nav */}
+            <nav style={{ display: "flex", justifyContent: "center", gap: 32, marginBottom: 20 }}>
+              <a href="#" style={{ fontSize: 15, fontWeight: 600, color: "#4b5563", textDecoration: "none" }}>Home</a>
+              <a href="#" style={{ fontSize: 15, fontWeight: 600, color: "#4b5563", textDecoration: "none" }}>Risk Score Scribe</a>
+              <a href="#" style={{ fontSize: 15, fontWeight: 600, color: "#4b5563", textDecoration: "none" }}>Why Us!</a>
+            </nav>
+
+            {/* Secondary nav */}
+            <nav style={{ display: "flex", justifyContent: "center", gap: 60, marginBottom: 24, flexWrap: "wrap", fontFamily: "var(--font-poppins), 'Poppins', sans-serif" }}>
+              <a href="#" style={{ fontSize: 14, fontWeight: 400, color: "#444A57", textDecoration: "none" }}>Privacy Policy</a>
+              <a href="#" style={{ fontSize: 14, fontWeight: 400, color: "#444A57", textDecoration: "none" }}>Legal</a>
+              <a href="#" style={{ fontSize: 14, fontWeight: 400, color: "#444A57", textDecoration: "none" }}>Terms of Use</a>
+              <a href="#" style={{ fontSize: 14, fontWeight: 400, color: "#444A57", textDecoration: "none" }}>HIPAA Compliance</a>
+            </nav>
+
+            {/* Divider */}
+            <div style={{ borderTop: "1px solid rgba(0,0,0,0.2)", marginBottom: 20 }} />
+
+            {/* Copyright */}
+            <p style={{ fontSize: 13, color: "#374151", margin: 0, fontWeight: 500 }}>© RiskScore AI. All right reserved</p>
+          </div>
+        </footer>
       </main>
     </div>
   );
