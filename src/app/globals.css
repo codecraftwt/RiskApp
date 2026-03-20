@@ -45,6 +45,12 @@ body {
   color: var(--foreground);
 }
 
+/* Hero heading - ensure horizontal centering */
+.hero-heading,
+.hero-heading span {
+  text-align: center !important;
+}
+
 /* Mobile responsive - bottom to top */
 @media (max-width: 768px) {
   /* Header */
@@ -110,6 +116,9 @@ body {
   .process-flow {
     padding: 48px 0 !important;
   }
+  .process-flow h2 {
+    font-size: 28px !important;
+  }
   .process-flow-grid {
     grid-template-columns: 1fr !important;
     gap: 16px !important;
@@ -130,7 +139,7 @@ body {
     padding: 48px 0 !important;
   }
   .scoring-methodology h2 {
-    font-size: 24px !important;
+    font-size: 28px !important;
   }
   .scoring-methodology-grid {
     grid-template-columns: 1fr !important;

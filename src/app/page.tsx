@@ -207,13 +207,15 @@ export default function Home() {
 
               {/* Heading */}
               <h1 className="hero-heading" style={{
-                maxWidth: 700,
+                maxWidth: "100%",
+                width: "100%",
                 fontWeight: 800,
-                fontSize: 52,
+                fontSize: 72,
                 lineHeight: 1.12,
                 color: "white",
                 marginBottom: 20,
                 letterSpacing: "-1px",
+                textAlign: "center",
               }}>
                 <span style={{ display: "block" }}>The Future of Medical</span>
                 <span className="hero-heading-line2" style={{ display: "block", whiteSpace: "nowrap" }}>Documentation Risk Management</span>
@@ -221,8 +223,8 @@ export default function Home() {
 
               {/* Sub */}
               <p style={{
-                maxWidth: 560,
-                fontSize: 16.5,
+                maxWidth: 640,
+                fontSize: 18,
                 lineHeight: 1.65,
                 color: "rgba(255,255,255,0.93)",
                 marginBottom: 36,
@@ -515,7 +517,7 @@ export default function Home() {
           {/* Header */}
           <div style={{ textAlign: "center", marginBottom: 48 }}>
             <h2 style={{
-              fontSize: 36,
+              fontSize: 48,
               fontWeight: 700,
               color: "#1a1a2e",
               margin: "0 0 16px",
@@ -534,7 +536,7 @@ export default function Home() {
             <p style={{
               maxWidth: 1000,
               margin: "0 auto",
-              fontSize: 16,
+              fontSize: 17,
               lineHeight: 1.7,
               color: "rgba(26,26,46,0.7)",
             }}>
@@ -551,12 +553,12 @@ export default function Home() {
             alignItems: "stretch",
           }}>
             {/* Left: Image with glassmorphism overlay */}
-            <div className="whats-risk-score-image" style={{ position: "relative", borderRadius: 24, overflow: "hidden", height: "100%", minHeight: 400 }}>
+            <div className="whats-risk-score-image" style={{ position: "relative", borderRadius: 24, overflow: "hidden", height: "100%", minHeight: 520 }}>
               <Image
                 src="/hero1.png"
                 alt="Doctor using tablet in clinical setting"
-                width={480}
-                height={640}
+                width={520}
+                height={680}
                 style={{
                   width: "100%",
                   height: "100%",
@@ -752,9 +754,9 @@ export default function Home() {
             alignItems: "center",
           }}>
             {/* Left: Text content */}
-            <div style={{ fontFamily: "var(--font-poppins), 'Poppins', sans-serif" }}>
+            <div style={{ fontFamily: "var(--font-poppins), 'Poppins', sans-serif", textAlign: "left" }}>
               <h2 style={{
-                fontSize: 36,
+                fontSize: 48,
                 fontWeight: 700,
                 color: "#1a1a2e",
                 margin: "0 0 20px",
@@ -765,11 +767,11 @@ export default function Home() {
                 Choose <span style={{ color: "#9B72CB" }}>RiskScore AI</span>
               </h2>
               <p style={{
-                fontSize: 16,
+                fontSize: 17,
                 lineHeight: 1.7,
                 color: "rgba(26,26,46,0.75)",
                 margin: "0 0 32px",
-                maxWidth: 520,
+                maxWidth: 540,
               }}>
                 RiskScore AI™ is a patent-pending solution that empowers both insurers and physicians to evaluate, improve, and protect medical documentation at scale, all without accessing PHI. For providers, it delivers AI-driven feedback that strengthens chart quality, reduces malpractice exposure, and saves valuable time by automating documentation review. For insurers, it provides risk-scored documentation audits that transform how they measure risk, reduce litigation, and improve profitability.
               </p>
@@ -790,13 +792,13 @@ export default function Home() {
                 <ArrowRight size={18} strokeWidth={2.5} />
               </button>
             </div>
-            {/* Right: Image - square, smaller */}
-            <div className="why-insurers-image" style={{ borderRadius: 24, overflow: "hidden", aspectRatio: "1 / 1", maxWidth: 380, justifySelf: "end", marginRight: 24 }}>
+            {/* Right: Image - square, larger */}
+            <div className="why-insurers-image" style={{ borderRadius: 24, overflow: "hidden", aspectRatio: "1 / 1", maxWidth: 560, justifySelf: "end", marginRight: 24 }}>
               <Image
                 src="/hero2.png"
                 alt="Medical professionals reviewing documentation"
-                width={300}
-                height={300}
+                width={560}
+                height={560}
                 style={{
                   width: "100%",
                   height: "100%",
@@ -976,7 +978,7 @@ export default function Home() {
             {/* Header */}
             <div className="scoring-methodology-header" style={{ textAlign: "center", marginBottom: 48 }}>
               <h2 style={{
-                fontSize: 36,
+                fontSize: 44,
                 fontWeight: 700,
                 color: "#1a1a2e",
                 margin: "0 0 4px",
@@ -985,7 +987,7 @@ export default function Home() {
                 Risk Score AI
               </h2>
               <h2 style={{
-                fontSize: 40,
+                fontSize: 52,
                 fontWeight: 700,
                 color: "#9B72CB",
                 margin: 0,
@@ -1079,7 +1081,7 @@ export default function Home() {
             {/* Header */}
             <div style={{ textAlign: "center", marginBottom: 48 }}>
               <h2 style={{
-                fontSize: 36,
+                fontSize: 48,
                 fontWeight: 700,
                 color: "#1a1a2e",
                 margin: 0,
@@ -1323,7 +1325,7 @@ export default function Home() {
           </div>
         </section>
 
-        <div style={{ height: 40 }} />
+        <div style={{ height: 50 }} />
 
         {/* Footer */}
         <footer className="footer" style={{
