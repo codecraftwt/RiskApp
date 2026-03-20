@@ -5,7 +5,9 @@ import {
   FileText,
   Eye,
   RefreshCw,
+  Scale,
   Send,
+  Target,
   Check,
   TrendingUp,
 } from "lucide-react";
@@ -1182,6 +1184,140 @@ export default function Home() {
                 </div>
                 <h3 style={{ fontSize: 16, fontWeight: 700, color: "#1a1a2e", margin: "0 0 8px", lineHeight: 1.3 }}>Risk Score (0-100)</h3>
                 <p style={{ fontSize: 14, lineHeight: 1.5, color: "rgba(26,26,46,0.7)", margin: 0 }}>Get a clear score with tips to improve.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Our Methodology Section */}
+        <section style={{
+          width: "100%",
+          backgroundColor: "#F7F7F7",
+          padding: "80px 0",
+        }}>
+          <div style={{
+            maxWidth: 1200,
+            margin: "0 auto",
+            padding: "0 32px",
+            display: "grid",
+            gridTemplateColumns: "minmax(0, 0.45fr) minmax(0, 0.55fr)",
+            gap: 48,
+            alignItems: "center",
+          }}>
+            {/* Left: Heading + Image */}
+            <div>
+              <h2 style={{
+                fontSize: 44,
+                fontWeight: 700,
+                color: "#1a1a2e",
+                margin: "0 0 24px",
+                lineHeight: 1.2,
+              }}>
+                Our{" "}
+                <span style={{ color: "#9B72CB" }}>Methodology</span>
+              </h2>
+              <div style={{ borderRadius: 24, overflow: "hidden", aspectRatio: "1 / 1", maxWidth: 440 }}>
+                <Image
+                  src="/hero2.png"
+                  alt="Healthcare professionals reviewing documentation"
+                  width={500}
+                  height={500}
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    display: "block",
+                  }}
+                />
+              </div>
+            </div>
+
+            {/* Right: 4 Cards */}
+            <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
+              {/* Card 1 */}
+              <div style={{
+                backgroundColor: "white",
+                borderRadius: 18,
+                padding: 20,
+                boxShadow: "0 8px 32px rgba(0,0,0,0.12)",
+                border: "1px solid rgba(0,0,0,0.04)",
+                display: "flex",
+                alignSelf: "flex-end",
+                gap: 14,
+                maxWidth: 550,
+              }}>
+                <div style={{ width: 44, height: 44, borderRadius: "50%", backgroundColor: "#F49C46", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                  <Target size={22} color="white" strokeWidth={2} />
+                </div>
+                <div>
+                  <h3 style={{ fontSize: 17, fontWeight: 700, color: "#1a1a2e", margin: "0 0 6px", lineHeight: 1.3 }}>Objective Assessment</h3>
+                  <p style={{ fontSize: 14.5, lineHeight: 1.55, color: "rgba(26,26,46,0.7)", margin: 0 }}>Consistent, unbiased evaluation of documentation quality across all providers</p>
+                </div>
+              </div>
+
+              {/* Card 2 */}
+              <div style={{
+                backgroundColor: "white",
+                borderRadius: 18,
+                padding: 20,
+                boxShadow: "0 8px 32px rgba(0,0,0,0.12)",
+                border: "1px solid rgba(0,0,0,0.04)",
+                display: "flex",
+                alignItems: "flex-start",
+                gap: 14,
+                alignSelf: "flex-end",
+                maxWidth: 420,
+              }}>
+                <div style={{ width: 44, height: 44, borderRadius: "50%", backgroundColor: "#1BA1E3", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                  <Image src="/shield.svg" alt="" width={22} height={22} />
+                </div>
+                <div>
+                  <h3 style={{ fontSize: 17, fontWeight: 700, color: "#1a1a2e", margin: "0 0 6px", lineHeight: 1.3 }}>HIPAA Compliant</h3>
+                  <p style={{ fontSize: 14.5, lineHeight: 1.55, color: "rgba(26,26,46,0.7)", margin: 0 }}>No PHI access required - we analyze structure & patterns only</p>
+                </div>
+              </div>
+
+              {/* Card 3 */}
+              <div style={{
+                backgroundColor: "white",
+                borderRadius: 18,
+                padding: 20,
+                boxShadow: "0 8px 32px rgba(0,0,0,0.12)",
+                border: "1px solid rgba(0,0,0,0.04)",
+                display: "flex",
+                alignSelf: "flex-end",
+                gap: 14,
+                maxWidth: 550,
+              }}>
+                <div style={{ width: 44, height: 44, borderRadius: "50%", backgroundColor: "#D96570", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                  <Scale size={22} color="white" strokeWidth={2} />
+                </div>
+                <div>
+                  <h3 style={{ fontSize: 17, fontWeight: 700, color: "#1a1a2e", margin: "0 0 6px", lineHeight: 1.3 }}>Scalable Solution</h3>
+                  <p style={{ fontSize: 14.5, lineHeight: 1.55, color: "rgba(26,26,46,0.7)", margin: 0 }}>Process thousands of medical notes simultaneously with consistent accuracy</p>
+                </div>
+              </div>
+
+              {/* Card 4 */}
+              <div style={{
+                backgroundColor: "white",
+                borderRadius: 18,
+                padding: 20,
+                boxShadow: "0 8px 32px rgba(0,0,0,0.12)",
+                border: "1px solid rgba(0,0,0,0.04)",
+                display: "flex",
+                alignItems: "flex-start",
+                gap: 14,
+                alignSelf: "flex-end",
+                maxWidth: 420,
+              }}>
+                <div style={{ width: 44, height: 44, borderRadius: "50%", backgroundColor: "#A083F1", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                  <TrendingUp size={22} color="white" strokeWidth={2} />
+                </div>
+                <div>
+                  <h3 style={{ fontSize: 17, fontWeight: 700, color: "#1a1a2e", margin: "0 0 6px", lineHeight: 1.3 }}>Actionable Insights</h3>
+                  <p style={{ fontSize: 14.5, lineHeight: 1.55, color: "rgba(26,26,46,0.7)", margin: 0 }}>Clear risk scores enable targeted interventions & quality improvement</p>
+                </div>
               </div>
             </div>
           </div>
