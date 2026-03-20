@@ -21,7 +21,7 @@ const navLinks = [
 
 export default function Home() {
   return (
-    <div style={{ minHeight: "100vh", backgroundColor: "#f8f7ff", fontFamily: "'Segoe UI', sans-serif" }}>
+    <div style={{ minHeight: "100vh", backgroundColor: "white", fontFamily: "'Segoe UI', sans-serif" }}>
       {/* Header */}
       <header style={{
         position: "sticky", top: 0, zIndex: 50,
@@ -809,7 +809,7 @@ export default function Home() {
         {/* Features Section - 3 cards */}
         <section style={{
           width: "100%",
-          backgroundColor: "#f8f7ff",
+          backgroundColor: "white",
           padding: "80px 0",
         }}>
           <div style={{
@@ -956,6 +956,110 @@ export default function Home() {
                 Learn More
                 <ArrowRight size={16} strokeWidth={2} />
               </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Risk Score AI Scoring Methodology Section */}
+        <section style={{
+          width: "100%",
+          backgroundColor: "#F7F7F7",
+          padding: "80px 0",
+        }}>
+          <div style={{
+            maxWidth: 1200,
+            margin: "0 auto",
+            padding: "0 32px",
+          }}>
+            {/* Header */}
+            <div style={{ textAlign: "center", marginBottom: 48 }}>
+              <h2 style={{
+                fontSize: 36,
+                fontWeight: 700,
+                color: "#1a1a2e",
+                margin: "0 0 4px",
+                lineHeight: 1.2,
+              }}>
+                Risk Score AI
+              </h2>
+              <h2 style={{
+                fontSize: 40,
+                fontWeight: 700,
+                color: "#9B72CB",
+                margin: 0,
+                lineHeight: 1.2,
+              }}>
+                Scoring Methodology
+              </h2>
+            </div>
+
+            {/* Two-column: Text blocks (left) | Image (right) */}
+            <div style={{
+              display: "grid",
+              gridTemplateColumns: "minmax(0, 0.45fr) minmax(0, 0.55fr)",
+              gap: 48,
+              alignItems: "center",
+            }}>
+              {/* Left: Two text blocks */}
+              <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
+                {/* Block 1: White card with purple left border */}
+                <div style={{
+                  backgroundColor: "white",
+                  borderRadius: 16,
+                  padding: 24,
+                  borderLeft: "4px solid #9B72CB",
+                  boxShadow: "0 2px 12px rgba(0,0,0,0.04)",
+                }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 12 }}>
+                    <Image src="/filetext3.svg" alt="" width={28} height={28} style={{ flexShrink: 0 }} />
+                    <h3 style={{ fontSize: 18, fontWeight: 700, color: "#1a1a2e", margin: 0, lineHeight: 1.3 }}>
+                      From Medical Note Text to Quantified Risk Reduction
+                    </h3>
+                  </div>
+                  <p style={{ fontSize: 15, lineHeight: 1.7, color: "rgba(26,26,46,0.7)", margin: 0 }}>
+                    Our advanced AI system transforms unstructured medical documentation into precise, actionable risk scores that enable insurers to make data-driven decisions about provider risk management and documentation quality improvement.
+                  </p>
+                </div>
+
+                {/* Block 2: No card, on background */}
+                <div>
+                  <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 12 }}>
+                    <div style={{
+                      width: 40,
+                      height: 40,
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      flexShrink: 0,
+                    }}>
+                      <Image src="/filetext3.svg" alt="" width={28} height={28} style={{ filter: "invert(72%) sepia(68%) saturate(684%) hue-rotate(350deg) brightness(102%) contrast(102%)" }} />
+                    </div>
+                    <h3 style={{ fontSize: 18, fontWeight: 700, color: "#1a1a2e", margin: 0, lineHeight: 1.3 }}>
+                      How We Extract Risk Scores from Medical Notes
+                    </h3>
+                  </div>
+                  <p style={{ fontSize: 15, lineHeight: 1.7, color: "rgba(26,26,46,0.7)", margin: 0 }}>
+                    We analyze the structure, completeness, and quality of documentation without accessing any patient health information (PHI). Our system evaluates documentation patterns, clinical reasoning, and compliance factors to generate objective risk assessments.
+                  </p>
+                </div>
+              </div>
+
+              {/* Right: Image */}
+              <div style={{ borderRadius: 24, overflow: "hidden", width: 623, height: 344 }}>
+                <Image
+                  src="/hero3.png"
+                  alt="Professional reviewing data dashboards"
+                  width={623}
+                  height={344}
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    display: "block",
+                    opacity: 1,
+                  }}
+                />
+              </div>
             </div>
           </div>
         </section>
