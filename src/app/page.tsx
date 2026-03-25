@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   ArrowRight,
   ArrowUpRight,
@@ -16,17 +16,47 @@ import {
   TrendingUp,
 } from "lucide-react";
 
-const navLinks = [
-  { label: "Home", href: "#home", active: true },
-  { label: "Risk Score AI", href: "#risk-score-ai", active: false },
-  { label: "Why Us", href: "#why-us", active: false },
-  { label: "Overview", href: "#overview", active: false },
-  { label: "Scoring Methodology", href: "#scoring-methodology", active: false },
-  { label: "API", href: "https://app.riskscoreai.com/api-docs", external: true, active: false },
+const navLinksConfig = [
+  { label: "Home", href: "#home", id: "home" },
+  { label: "Risk Score AI", href: "#risk-score-ai", id: "risk-score-ai" },
+  { label: "Why Us", href: "#why-us", id: "why-us" },
+  { label: "Overview", href: "#overview", id: "overview" },
+  { label: "Scoring Methodology", href: "#scoring-methodology", id: "scoring-methodology" },
+  { label: "API", href: "https://app.riskscoreai.com/api-docs", external: true, id: "api" },
 ];
 
 export default function Home() {
   const [scoringActiveBlock, setScoringActiveBlock] = useState(0);
+  const [activeSection, setActiveSection] = useState("home");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = navLinksConfig
+        .filter(link => !link.external)
+        .map(link => ({
+          id: link.id,
+          element: document.getElementById(link.id),
+        }));
+
+      const scrollPosition = window.scrollY + 100;
+
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = sections[i];
+        if (section.element) {
+          const offsetTop = section.element.offsetTop;
+          if (scrollPosition >= offsetTop) {
+            setActiveSection(section.id);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <div style={{ minHeight: "100vh", backgroundColor: "white", fontFamily: "'Segoe UI', sans-serif" }}>
@@ -55,7 +85,7 @@ export default function Home() {
 
           {/* Nav */}
           <nav className="header-nav" style={{ display: "flex", alignItems: "center", gap: 32 }}>
-            {navLinks.map((link) => (
+            {navLinksConfig.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
@@ -65,7 +95,7 @@ export default function Home() {
                   fontSize: 13.5,
                   fontWeight: 500,
                   textDecoration: "none",
-                  color: link.active ? "#7c5cbf" : "rgba(26,26,46,0.75)",
+                  color: activeSection === link.id ? "#7c5cbf" : "rgba(26,26,46,0.75)",
                   transition: "color 0.2s",
                 }}
               >

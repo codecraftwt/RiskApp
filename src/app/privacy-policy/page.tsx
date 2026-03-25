@@ -2,19 +2,21 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
-import { ArrowLeft } from "lucide-react";
+import { ArrowRight, ArrowLeft } from "lucide-react";
 
 const navLinks = [
-  { label: "Home", href: "/", active: true },
-  { label: "Risk Score AI", href: "/#risk-score-ai", active: false },
-  { label: "Why Us", href: "/#why-us", active: false },
-  { label: "Overview", href: "/#overview", active: false },
-  { label: "Scoring Methodology", href: "/#scoring-methodology", active: false },
-  { label: "API", href: "https://app.riskscoreai.com/api-docs", external: true, active: false },
+  { label: "Home", href: "/", id: "home" },
+  { label: "Risk Score AI", href: "/#risk-score-ai", id: "risk-score-ai" },
+  { label: "Why Us", href: "/#why-us", id: "why-us" },
+  { label: "Overview", href: "/#overview", id: "overview" },
+  { label: "Scoring Methodology", href: "/#scoring-methodology", id: "scoring-methodology" },
+  { label: "API", href: "https://app.riskscoreai.com/api-docs", external: true, id: "api" },
 ];
 
 export default function PrivacyPolicy() {
+  // On privacy policy page, no section is "active" since it's a separate page
+  // But we highlight Home as it's the main navigation back
+  const activeSection = "home";
   return (
     <div className="privacy-page" style={{ minHeight: "100vh", backgroundColor: "white", fontFamily: "'Segoe UI', sans-serif" }}>
       {/* Header - Same as Home Page */}
@@ -52,7 +54,7 @@ export default function PrivacyPolicy() {
                   fontSize: 13.5,
                   fontWeight: 500,
                   textDecoration: "none",
-                  color: link.active ? "#7c5cbf" : "rgba(26,26,46,0.75)",
+                  color: activeSection === link.id ? "#7c5cbf" : "rgba(26,26,46,0.75)",
                   transition: "color 0.2s",
                 }}
               >
