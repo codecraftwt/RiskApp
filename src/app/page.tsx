@@ -96,8 +96,8 @@ export default function Home() {
                     e.preventDefault();
                     const element = document.getElementById(link.id);
                     if (element) {
-                      // Home gets 120px, Overview gets 50px, others get 0
-                      const headerOffset = link.id === "home" ? 120 : link.id === "overview" ? 50 : 0;
+                      // Home and Why Us get 120px, Overview gets 50px, others get 0
+                      const headerOffset = link.id === "home" || link.id === "why-us" ? 68: link.id === "overview" ? 50 : 0;
                       const elementPosition = element.getBoundingClientRect().top;
                       const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
                       window.scrollTo({
@@ -1467,7 +1467,7 @@ export default function Home() {
                   e.preventDefault();
                   const element = document.getElementById("why-us");
                   if (element) {
-                    const headerOffset = 0;
+                    const headerOffset = 68;
                     const elementPosition = element.getBoundingClientRect().top;
                     const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
                     window.scrollTo({
