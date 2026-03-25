@@ -91,12 +91,29 @@ export default function Home() {
                 href={link.href}
                 target={link.external ? "_blank" : undefined}
                 rel={link.external ? "noopener noreferrer" : undefined}
+                onClick={(e) => {
+                  if (!link.external && link.href.startsWith("#")) {
+                    e.preventDefault();
+                    const element = document.getElementById(link.id);
+                    if (element) {
+                      // Home gets 120px, Overview gets 50px, others get 0
+                      const headerOffset = link.id === "home" ? 120 : link.id === "overview" ? 50 : 0;
+                      const elementPosition = element.getBoundingClientRect().top;
+                      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                      window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth",
+                      });
+                    }
+                  }
+                }}
                 style={{
                   fontSize: 13.5,
                   fontWeight: 500,
                   textDecoration: "none",
                   color: activeSection === link.id ? "#7c5cbf" : "rgba(26,26,46,0.75)",
                   transition: "color 0.2s",
+                  cursor: "pointer",
                 }}
               >
                 {link.label}
@@ -1406,9 +1423,63 @@ export default function Home() {
 
             {/* Primary nav */}
             <nav className="footer-primary-nav" style={{ display: "flex", justifyContent: "center", gap: 32, marginBottom: 20 }}>
-              <a href="#home" style={{ fontSize: 15, fontWeight: 600, color: "#4b5563", textDecoration: "none" }}>Home</a>
-              <a href="#risk-score-ai" style={{ fontSize: 15, fontWeight: 600, color: "#4b5563", textDecoration: "none" }}>Risk Score Scribe</a>
-              <a href="#why-us" style={{ fontSize: 15, fontWeight: 600, color: "#4b5563", textDecoration: "none" }}>Why Us!</a>
+              <a
+                href="#home"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const element = document.getElementById("home");
+                  if (element) {
+                    const headerOffset = 60;
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    window.scrollTo({
+                      top: offsetPosition,
+                      behavior: "smooth",
+                    });
+                  }
+                }}
+                style={{ fontSize: 15, fontWeight: 600, color: "#4b5563", textDecoration: "none", cursor: "pointer" }}
+              >
+                Home
+              </a>
+              <a
+                href="#risk-score-ai"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const element = document.getElementById("risk-score-ai");
+                  if (element) {
+                    const headerOffset = 0;
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    window.scrollTo({
+                      top: offsetPosition,
+                      behavior: "smooth",
+                    });
+                  }
+                }}
+                style={{ fontSize: 15, fontWeight: 600, color: "#4b5563", textDecoration: "none", cursor: "pointer" }}
+              >
+                Risk Score Scribe
+              </a>
+              <a
+                href="#why-us"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const element = document.getElementById("why-us");
+                  if (element) {
+                    const headerOffset = 0;
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    window.scrollTo({
+                      top: offsetPosition,
+                      behavior: "smooth",
+                    });
+                  }
+                }}
+                style={{ fontSize: 15, fontWeight: 600, color: "#4b5563", textDecoration: "none", cursor: "pointer" }}
+              >
+                Why Us!
+              </a>
             </nav>
 
             {/* Secondary nav */}
