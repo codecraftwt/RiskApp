@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import {
   ArrowRight,
@@ -16,12 +17,12 @@ import {
 } from "lucide-react";
 
 const navLinks = [
-  { label: "Home", active: true },
-  { label: "Risk Score AI", active: false },
-  { label: "Why Us", active: false },
-  { label: "Overview", active: false },
-  { label: "Scoring Methodology", active: false },
-  { label: "API", active: false },
+  { label: "Home", href: "#home", active: true },
+  { label: "Risk Score AI", href: "#risk-score-ai", active: false },
+  { label: "Why Us", href: "#why-us", active: false },
+  { label: "Overview", href: "#overview", active: false },
+  { label: "Scoring Methodology", href: "#scoring-methodology", active: false },
+  { label: "API", href: "https://app.riskscoreai.com/api-docs", external: true, active: false },
 ];
 
 export default function Home() {
@@ -42,7 +43,7 @@ export default function Home() {
           padding: "14px 32px",
         }}>
           {/* Logo */}
-          <a href="/" className="header-logo" style={{ display: "flex", alignItems: "center", textDecoration: "none" }}>
+          <Link href="/" className="header-logo" style={{ display: "flex", alignItems: "center", textDecoration: "none" }}>
             <Image
               src="/logo.svg"
               alt="RiskScore AI"
@@ -50,14 +51,16 @@ export default function Home() {
               height={36}
               priority
             />
-          </a>
+          </Link>
 
           {/* Nav */}
           <nav className="header-nav" style={{ display: "flex", alignItems: "center", gap: 32 }}>
             {navLinks.map((link) => (
               <a
                 key={link.label}
-                href="#"
+                href={link.href}
+                target={link.external ? "_blank" : undefined}
+                rel={link.external ? "noopener noreferrer" : undefined}
                 style={{
                   fontSize: 13.5,
                   fontWeight: 500,
@@ -72,27 +75,34 @@ export default function Home() {
           </nav>
 
           {/* CTA */}
-          <button className="btn btn-header btn-get-started" style={{
-            display: "flex", alignItems: "center", gap: 7,
-            borderRadius: 50,
-            background: "linear-gradient(135deg, #7c5cbf, #9b72cb)",
-            border: "none",
-            padding: "10px 22px",
-            fontSize: 13.5,
-            fontWeight: 600,
-            color: "white",
-            cursor: "pointer",
-            letterSpacing: "0.1px",
-          }}>
+          <a
+            href="https://app.riskscoreai.com/login/insurance-partner"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-header btn-get-started"
+            style={{
+              display: "flex", alignItems: "center", gap: 7,
+              borderRadius: 50,
+              background: "linear-gradient(135deg, #7c5cbf, #9b72cb)",
+              border: "none",
+              padding: "10px 22px",
+              fontSize: 13.5,
+              fontWeight: 600,
+              color: "white",
+              cursor: "pointer",
+              letterSpacing: "0.1px",
+              textDecoration: "none",
+            }}
+          >
             Get Started
             <ArrowRight size={15} strokeWidth={2.5} />
-          </button>
+          </a>
         </div>
       </header>
 
       <main style={{ position: "relative" }}>
         {/* Hero Section */}
-        <section className="hero-section" style={{ maxWidth: 1400, margin: "0 auto", padding: "40px 32px 0" }}>
+        <section id="home" className="hero-section" style={{ maxWidth: 1400, margin: "0 auto", padding: "40px 32px 0" }}>
           <div style={{ position: "relative" }}>
             {/* Gradient background with overlays (clipped) */}
             <div className="hero-gradient-bg" style={{
@@ -238,22 +248,29 @@ export default function Home() {
               </p>
 
               {/* CTA Button */}
-              <button className="btn btn-hero btn-get-started" style={{
-                display: "flex", alignItems: "center", gap: 8,
-                borderRadius: 50,
-                backgroundColor: "white",
-                border: "none",
-                padding: "12px 28px",
-                margin: "16px 0",
-                fontSize: 15,
-                fontWeight: 700,
-                color: "#1a1a2e",
-                cursor: "pointer",
-                letterSpacing: "-0.1px",
-              }}>
+              <a
+                href="https://app.riskscoreai.com/login/insurance-partner"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-hero btn-get-started"
+                style={{
+                  display: "flex", alignItems: "center", gap: 8,
+                  borderRadius: 50,
+                  backgroundColor: "white",
+                  border: "none",
+                  padding: "12px 28px",
+                  margin: "16px 0",
+                  fontSize: 15,
+                  fontWeight: 700,
+                  color: "#1a1a2e",
+                  cursor: "pointer",
+                  letterSpacing: "-0.1px",
+                  textDecoration: "none",
+                }}
+              >
                 Get Started
                 <ArrowUpRight size={18} strokeWidth={2.5} />
-              </button>
+              </a>
             </div>
 
             {/* Feature Cards - inside hero, flush to bottom */}
@@ -517,7 +534,7 @@ export default function Home() {
         </section>
 
         {/* What's Risk Score AI Section */}
-        <section className="whats-risk-score" style={{ maxWidth: 1200, margin: "0 auto", padding: "100px 32px 80px" }}>
+        <section id="risk-score-ai" className="whats-risk-score" style={{ maxWidth: 1200, margin: "0 auto", padding: "100px 32px 80px" }}>
           {/* Header */}
           <div style={{ textAlign: "center", marginBottom: 48 }}>
             <h2 style={{
@@ -743,7 +760,7 @@ export default function Home() {
         </section>
 
         {/* Why Insurers Choose RiskScore AI Section - full width bg, content same width as other sections */}
-        <section className="why-insurers" style={{
+        <section id="why-us" className="why-insurers" style={{
           width: "100%",
           backgroundColor: "#F6F6F6",
           padding: "80px 0",
@@ -815,7 +832,7 @@ export default function Home() {
         </section>
 
         {/* Features Section - 3 cards */}
-        <section className="features-section" style={{
+        <section id="overview" className="features-section" style={{
           width: "100%",
           backgroundColor: "white",
           padding: "80px 0",
@@ -960,7 +977,7 @@ export default function Home() {
         </section>
 
         {/* Risk Score AI Scoring Methodology Section */}
-        <section className="scoring-methodology" style={{
+        <section id="scoring-methodology" className="scoring-methodology" style={{
           width: "100%",
           backgroundColor: "#F7F7F7",
           padding: "80px 0",
@@ -1353,22 +1370,22 @@ export default function Home() {
         }}>
           <div style={{ maxWidth: 1200, margin: "0 auto" }}>
             {/* Logo */}
-            <a href="/" className="footer-logo" style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 10, textDecoration: "none", marginBottom: 24 }}>
+            <Link href="/" className="footer-logo" style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 10, textDecoration: "none", marginBottom: 24 }}>
               <Image src="/logo.svg" alt="RiskScore AI" width={220} height={44} />
-            </a>
+            </Link>
 
             {/* Primary nav */}
             <nav className="footer-primary-nav" style={{ display: "flex", justifyContent: "center", gap: 32, marginBottom: 20 }}>
-              <a href="#" style={{ fontSize: 15, fontWeight: 600, color: "#4b5563", textDecoration: "none" }}>Home</a>
-              <a href="#" style={{ fontSize: 15, fontWeight: 600, color: "#4b5563", textDecoration: "none" }}>Risk Score Scribe</a>
-              <a href="#" style={{ fontSize: 15, fontWeight: 600, color: "#4b5563", textDecoration: "none" }}>Why Us!</a>
+              <a href="#home" style={{ fontSize: 15, fontWeight: 600, color: "#4b5563", textDecoration: "none" }}>Home</a>
+              <a href="#risk-score-ai" style={{ fontSize: 15, fontWeight: 600, color: "#4b5563", textDecoration: "none" }}>Risk Score Scribe</a>
+              <a href="#why-us" style={{ fontSize: 15, fontWeight: 600, color: "#4b5563", textDecoration: "none" }}>Why Us!</a>
             </nav>
 
             {/* Secondary nav */}
             <nav className="footer-secondary-nav" style={{ display: "flex", justifyContent: "center", gap: 60, marginBottom: 24, flexWrap: "wrap", fontFamily: "var(--font-poppins), 'Poppins', sans-serif" }}>
-              <a href="#" style={{ fontSize: 14, fontWeight: 400, color: "#444A57", textDecoration: "none" }}>Privacy Policy</a>
-              <a href="#" style={{ fontSize: 14, fontWeight: 400, color: "#444A57", textDecoration: "none" }}>Legal</a>
-              <a href="#" style={{ fontSize: 14, fontWeight: 400, color: "#444A57", textDecoration: "none" }}>Terms of Use</a>
+              <Link href="/privacy-policy" style={{ fontSize: 14, fontWeight: 400, color: "#444A57", textDecoration: "none" }}>Privacy Policy</Link>
+              <Link href="/legal" style={{ fontSize: 14, fontWeight: 400, color: "#444A57", textDecoration: "none" }}>Legal</Link>
+              <a href="/TERM.pdf" style={{ fontSize: 14, fontWeight: 400, color: "#444A57", textDecoration: "none" }}>Terms of Use</a>
               <a href="#" style={{ fontSize: 14, fontWeight: 400, color: "#444A57", textDecoration: "none" }}>HIPAA Compliance</a>
             </nav>
 
