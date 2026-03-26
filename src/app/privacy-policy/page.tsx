@@ -146,7 +146,7 @@ export default function PrivacyPolicy() {
             margin: "0 0 24px",
             lineHeight: 1.3,
           }}>
-            RISK SCORE AI™ Privacy & Security
+            RISK SCORE AI<sup style={{ fontSize: "0.6em", fontWeight: 700 }}>™</sup> Privacy & Security
           </h2>
 
         {/* Intro Paragraph */}
