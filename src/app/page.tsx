@@ -1487,7 +1487,7 @@ export default function Home() {
               <Link href="/privacy-policy" style={{ fontSize: 14, fontWeight: 400, color: "#444A57", textDecoration: "none" }}>Privacy Policy</Link>
               <Link href="/legal" style={{ fontSize: 14, fontWeight: 400, color: "#444A57", textDecoration: "none" }}>Legal</Link>
               <a href="/TERM.pdf" style={{ fontSize: 14, fontWeight: 400, color: "#444A57", textDecoration: "none" }}>Terms of Use</a>
-              <a href="#" style={{ fontSize: 14, fontWeight: 400, color: "#444A57", textDecoration: "none" }}>HIPAA Compliance</a>
+              <a href="/HIPAA.pdf" style={{ fontSize: 14, fontWeight: 400, color: "#444A57", textDecoration: "none" }}>HIPAA Compliance</a>
             </nav>
 
             {/* Divider */}
