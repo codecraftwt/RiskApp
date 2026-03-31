@@ -250,7 +250,23 @@ export default function Home() {
             {/* Hero content */}
             <div className="hero-content" style={{ position: "relative", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", padding: "80px 60px 0" }}>
               {/* Badge */}
-              <a href="#" className="btn" style={{
+              <a
+                href="#risk-score-ai"
+                className="btn"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const element = document.getElementById("risk-score-ai");
+                  if (element) {
+                    const headerOffset = 0;
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    window.scrollTo({
+                      top: offsetPosition,
+                      behavior: "smooth",
+                    });
+                  }
+                }}
+                style={{
                 display: "inline-flex", alignItems: "center", gap: 6,
                 borderRadius: 50,
                 backgroundColor: "rgba(255,255,255,0.22)",
@@ -262,7 +278,8 @@ export default function Home() {
                 textDecoration: "none",
                 marginBottom: 28,
                 border: "1px solid rgba(255,255,255,0.3)",
-              }}>
+              }}
+              >
                 RiskScore AI
                 <ArrowUpRight size={14} />
               </a>
@@ -920,19 +937,6 @@ export default function Home() {
               <p style={{ fontSize: 15, lineHeight: 1.6, color: "rgba(26,26,46,0.75)", margin: "0 0 24px", flex: 1 }}>
                 Evaluates structure, rationale, follow-ups, consent, & more.
               </p>
-              <button className="btn btn-outline" style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: 8,
-                padding: "10px 20px",
-                borderRadius: 9999,
-                fontSize: 14,
-                fontWeight: 600,
-                cursor: "pointer",
-              }}>
-                Learn More
-                <ArrowRight size={16} strokeWidth={2} />
-              </button>
             </div>
 
             {/* Card 2 - Blue */}
@@ -963,19 +967,6 @@ export default function Home() {
               <p style={{ fontSize: 15, lineHeight: 1.6, color: "rgba(26,26,46,0.75)", margin: "0 0 24px", flex: 1 }}>
                 Flag at-risk providers. Track trends. Intervene early.
               </p>
-              <button className="btn btn-outline" style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: 8,
-                padding: "10px 20px",
-                borderRadius: 9999,
-                fontSize: 14,
-                fontWeight: 600,
-                cursor: "pointer",
-              }}>
-                Learn More
-                <ArrowRight size={16} strokeWidth={2} />
-              </button>
             </div>
 
             {/* Card 3 - Red/Pink */}
@@ -1006,19 +997,6 @@ export default function Home() {
               <p style={{ fontSize: 15, lineHeight: 1.6, color: "rgba(26,26,46,0.75)", margin: "0 0 24px", flex: 1 }}>
                 Fully HIPAA-compliant. No protected health data accessed or stored.
               </p>
-              <button className="btn btn-outline" style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: 8,
-                padding: "10px 20px",
-                borderRadius: 9999,
-                fontSize: 14,
-                fontWeight: 600,
-                cursor: "pointer",
-              }}>
-                Learn More
-                <ArrowRight size={16} strokeWidth={2} />
-              </button>
             </div>
           </div>
         </section>
