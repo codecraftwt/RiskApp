@@ -860,22 +860,29 @@ export default function Home() {
               }}>
                 RiskScore AI™ is a patent-pending solution that empowers both insurers and physicians to evaluate, improve, and protect medical documentation at scale, all without accessing PHI. For providers, it delivers AI-driven feedback that strengthens chart quality, reduces malpractice exposure, and saves valuable time by automating documentation review. For insurers, it provides risk-scored documentation audits that transform how they measure risk, reduce litigation, and improve profitability.
               </p>
-              <button className="btn btn-purple" style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: 8,
-                padding: "12px 24px",
-                borderRadius: 9999,
-                backgroundColor: "#9B72CB",
-                border: "none",
-                color: "white",
-                fontSize: 15,
-                fontWeight: 600,
-                cursor: "pointer",
-              }}>
+              <a
+                href="https://app.riskscoreai.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-purple"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: 8,
+                  padding: "12px 24px",
+                  borderRadius: 9999,
+                  backgroundColor: "#9B72CB",
+                  border: "none",
+                  color: "white",
+                  fontSize: 15,
+                  fontWeight: 600,
+                  cursor: "pointer",
+                  textDecoration: "none",
+                }}
+              >
                 Access RiskScore AI
                 <ArrowRight size={18} strokeWidth={2.5} />
-              </button>
+              </a>
             </div>
             {/* Right: Image - square, larger */}
             <div className="why-insurers-image" style={{ borderRadius: 24, overflow: "hidden", aspectRatio: "1 / 1", maxWidth: 560, justifySelf: "end", marginRight: 24 }}>
@@ -1472,7 +1479,7 @@ export default function Home() {
             <div style={{ borderTop: "1px solid rgba(0,0,0,0.2)", marginBottom: 20 }} />
 
             {/* Copyright */}
-            <p style={{ fontSize: 13, color: "#374151", margin: 0, fontWeight: 500 }}>© RiskScore AI. All right reserved</p>
+            <p style={{ fontSize: 13, color: "#374151", margin: 0, fontWeight: 500 }}>© {new Date().getFullYear()} RiskScore AI. All rights reserved</p>
           </div>
         </footer>
       </main>
